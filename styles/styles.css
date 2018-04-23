@@ -242,8 +242,8 @@ h2.heading {
 
 .partners {
   position: absolute;
-  bottom: 11vw;
-  right: 18vw; }
+  bottom: 9vw;
+  right: 14vw; }
   .partners p {
     font-size: 22px;
     font-weight: 100;
@@ -419,8 +419,8 @@ h2.heading {
   left: calc(50% - 30px);
   width: 60px;
   height: 85px;
-  border: 1.5px solid red;
-  background: blue;
+  border: 0.5px solid black;
+  background: darkblue;
   z-index: -1;
   display: none; }
   .flipster__item--current .card {
@@ -971,16 +971,15 @@ h2.heading {
 .jackpot {
   max-width: 1280px;
   margin: 0 auto;
-  padding-top: 2.72em;
   border-bottom: 1px solid rgba(50, 52, 52, 0.8); }
   .jackpot__container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap; }
   .jackpot__text {
-    padding: 0 0 1.36em 1.36em; }
-  .jackpot__club_bottom {
-    padding-top: 1.81em; }
+    padding: 1.81em 0 1.36em 1.36em; }
+  .jackpot__interior {
+    padding: 0 0.4em; }
   .jackpot__caption {
     font-size: 18px;
     font-weight: 400;
@@ -998,20 +997,20 @@ h2.heading {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 25px;
+    padding: 0.3em 0.75em;
     position: relative;
     overflow: hidden;
-    border-radius: 25px; }
+    border-radius: 0.6em; }
   .jackpot-wb_yellow {
     color: #fff770;
     background: #0a0f17 radial-gradient(ellipse at center bottom, rgba(255, 247, 112, 0.3) 0%, transparent 80%);
-    box-shadow: -4px 6px 20px 0.5px #1a1a10, 0px 9px 68px 33px #202018; }
+    box-shadow: -4px 6px 20px 0.5px #1a1a10, 0px 9px 68px 0.8em #202018; }
   .jackpot-wb_green {
     color: #2bfd62;
     background: #0a0f17 radial-gradient(ellipse at center bottom, rgba(43, 253, 98, 0.3) 0%, transparent 80%);
-    box-shadow: -4px 6px 20px 0.5px #0a1811, 0px 9px 68px 33px #19271f; }
+    box-shadow: -4px 6px 20px 0.5px #0a1811, 0px 9px 68px 0.8em #19271f; }
   .jackpot-wb__text-wrap {
-    padding: 0px 40px 0 0;
+    padding: 0px 1.21em 0 0;
     position: relative; }
   .jackpot-wb__text-wrap svg {
     height: 100%;
@@ -1023,7 +1022,7 @@ h2.heading {
   .jackpot-wb__num-box {
     font-family: 'LcdAttPhone';
     font-weight: 400;
-    font-size: 98px;
+    font-size: 94px;
     position: relative; }
   .jackpot-wb__back {
     opacity: 1;
@@ -1043,7 +1042,9 @@ h2.heading {
     font-size: 95px;
     font-weight: 600;
     color: #ff5d5d;
-    padding: 0.84em 0 1.36em 0; }
+    padding: 3.4vw 0 5.85vw 0; }
+    .jackpot__bonus p {
+      padding: 0.11em 0; }
 
 .conditions {
   max-width: 1280px;
@@ -1051,9 +1052,9 @@ h2.heading {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: 225px 225px;
-  grid-gap: 10px 10px;
+  grid-gap: 0.4vw 0.4vw;
   text-align: center;
-  padding-bottom: 3.78em; }
+  padding: 0 0.7vw 3.78em 0.7vw; }
   .conditions__item {
     display: flex;
     flex-direction: column;
@@ -1063,25 +1064,25 @@ h2.heading {
     .conditions__item:nth-child(1) {
       grid-row: 1/3; }
       .conditions__item:nth-child(1) img {
-        margin-top: 45px; }
+        margin-top: 1.36em; }
       .conditions__item:nth-child(1) p {
-        margin-top: 55px; }
+        margin-top: 3.43em; }
     .conditions__item:nth-child(2) {
       grid-row: 1/3; }
       .conditions__item:nth-child(2) img {
-        margin: 30px 15px 0px 0px; }
+        margin: 0.9em 0.45em 0px 0px; }
       .conditions__item:nth-child(2) p {
-        margin-top: 75px; }
+        margin-top: 4.68em; }
     .conditions__item:nth-child(3) p {
-      margin-top: 25px; }
+      margin-top: 1.56em; }
     .conditions__item:nth-child(4) img {
-      margin-top: 20px; }
+      margin-top: 0.6em; }
     .conditions__item:nth-child(4) p {
-      margin-top: 30px; }
+      margin-top: 1.87em; }
     .conditions__item:nth-child(5) p {
-      margin-top: 30px; }
+      margin-top: 1.87em; }
     .conditions__item:nth-child(6) p {
-      margin-top: 30px; }
+      margin-top: 1.87em; }
   .conditions p {
     font-size: 16px;
     line-height: 1.4;
@@ -1094,7 +1095,8 @@ h2.heading {
 .description {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding: 0 2em 0 2em; }
   .description p {
     font-size: 18px;
     font-weight: 400;
@@ -1105,7 +1107,8 @@ h2.heading {
     .description__text p {
       padding-bottom: 35px; }
   .description__image {
-    position: relative; }
+    position: relative;
+    top: 0.09em; }
     .description__image_text-one {
       position: absolute;
       top: -1%;
@@ -1213,16 +1216,30 @@ h2.heading {
     justify-content: space-around; }
   .jackpot__interior {
     flex: 1 50%; }
-  .jackpot__club {
-    padding: 0 0.5em; }
-  .jackpot__local {
-    padding: 0 0.5em; }
+  .jackpot__caption {
+    font-size: 17px; }
   .jackpot__description {
     font-size: 17px; }
+  .jackpot__bonus {
+    font-size: 76px; }
+  .jackpot-wb {
+    justify-content: space-around; }
   .jackpot-wb__text-wrap svg {
     width: 6.2em; }
   .jackpot-wb__num-box {
-    font-size: 64px; } }
+    font-size: 66px; }
+  .conditions__item {
+    padding: 1em 1em; }
+    .conditions__item p {
+      font-size: 15px; }
+  .partners {
+    bottom: 9vw;
+    right: 10vw; }
+    .partners p {
+      font-size: 18px;
+      line-height: 1.3; }
+  .description p {
+    font-size: 16px; } }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1234,6 +1251,12 @@ h2.heading {
     font-size: 46px; }
   .section__inner {
     padding: 3.93em 1.2em 1.81em 1.2em; }
+  .header {
+    justify-content: center; }
+  .nav {
+    display: none; }
+  .contacts {
+    display: none; }
   .button {
     font-size: 13px; }
   .suppliers {
@@ -1249,7 +1272,35 @@ h2.heading {
   .register__item:before {
     font-size: 300px; }
   .register h3 {
-    font-size: 20px; } }
+    font-size: 20px; }
+  .jackpot__interior {
+    flex: 1 51%;
+    margin: 0 auto;
+    padding: 0 19%; }
+  .jackpot__caption {
+    font-size: 16px; }
+  .jackpot__description {
+    font-size: 16px; }
+  .jackpot__bonus {
+    flex-direction: column;
+    align-items: center;
+    font-size: 60px; }
+  .jackpot-wb {
+    justify-content: space-around; }
+  .jackpot-wb__text-wrap svg {
+    width: 6.5em; }
+  .jackpot-wb__num-box {
+    font-size: 64px; }
+  .conditions__item {
+    padding: 1em 0.6em; }
+    .conditions__item p {
+      font-size: 14px; }
+  .partners {
+    bottom: 9vw;
+    right: 6vw; }
+    .partners p {
+      font-size: 15px;
+      line-height: 1.3; } }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
@@ -1265,6 +1316,12 @@ h2.heading {
       display: none; }
   .section__inner {
     padding: 3.93em 1.2em 1.81em 1.2em; }
+  .header {
+    justify-content: center; }
+  .nav {
+    display: none; }
+  .contacts {
+    display: none; }
   .button {
     font-size: 12px; }
   .suppliers {
@@ -1297,7 +1354,48 @@ h2.heading {
   .register__item:before {
     font-size: 250px; }
   .register h3 {
-    font-size: 16px; } }
+    font-size: 16px; }
+  .jackpot__interior {
+    flex: 1 51%;
+    margin: 0 auto;
+    padding: 0 10%; }
+  .jackpot__caption {
+    font-size: 15px; }
+  .jackpot__description {
+    font-size: 15px; }
+  .jackpot__bonus {
+    flex-direction: column;
+    align-items: center;
+    font-size: 52px; }
+  .jackpot-wb {
+    justify-content: space-around; }
+  .jackpot-wb__text-wrap svg {
+    width: 7em; }
+  .jackpot-wb__num-box {
+    font-size: 60px; }
+  .conditions {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-gap: 0.8vh 1vw; }
+    .conditions__item {
+      padding: 1em 0.3em; }
+      .conditions__item:nth-child(1) {
+        grid-column: 1/3; }
+      .conditions__item:nth-child(2) {
+        grid-column: 1/3;
+        grid-row: 3/4; }
+        .conditions__item:nth-child(2) p {
+          margin-top: 1.68em; }
+        .conditions__item:nth-child(2) br {
+          display: none; }
+      .conditions__item p {
+        font-size: 13px; }
+  .partners {
+    bottom: 7vw;
+    right: 5vw; }
+    .partners p {
+      font-size: 12px;
+      line-height: 1.2; } }
 
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
@@ -1311,6 +1409,12 @@ h2.heading {
     padding: 2em 0.5em 0 0.5em; }
   .section__inner {
     padding: 3.93em 1.2em 1.81em 1.2em; }
+  .header {
+    justify-content: center; }
+  .nav {
+    display: none; }
+  .contacts {
+    display: none; }
   .button {
     font-size: 10px; }
   .suppliers {
@@ -1341,9 +1445,9 @@ h2.heading {
     .register__item {
       max-width: 100%; }
       .register__item:nth-child(1) {
-        padding-bottom: 5em; }
+        padding-bottom: 6em; }
       .register__item:nth-child(2) {
-        padding-bottom: 5em; }
+        padding-bottom: 6em; }
       .register__item:before {
         font-size: 280px; }
       .register__item:nth-child(1):before {
@@ -1353,4 +1457,43 @@ h2.heading {
       .register__item:nth-child(3):before {
         left: 17%; }
     .register h3 {
-      font-size: 14px; } }
+      font-size: 14px; }
+  .jackpot__interior {
+    flex: 1 51%;
+    margin: 0 auto;
+    padding: 0 10%; }
+  .jackpot__caption {
+    font-size: 14px; }
+  .jackpot__description {
+    font-size: 14px; }
+  .jackpot__bonus {
+    flex-direction: column;
+    align-items: center;
+    font-size: 52px; }
+  .jackpot-wb {
+    justify-content: space-around; }
+  .jackpot-wb__text-wrap svg {
+    width: 6.5em; }
+  .jackpot-wb__num-box {
+    font-size: 40px; }
+  .conditions {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    grid-gap: 0.8vh 1vw; }
+    .conditions__item {
+      padding: 1em 0.3em; }
+      .conditions__item:nth-child(1) {
+        grid-column: 1/3; }
+      .conditions__item:nth-child(2) {
+        grid-column: 1/3;
+        grid-row: 3/4; }
+        .conditions__item:nth-child(2) p {
+          margin-top: 1.68em; }
+      .conditions__item p {
+        font-size: 11.5px; }
+  .partners {
+    bottom: 3vw;
+    right: 4vw; }
+    .partners p {
+      font-size: 10px;
+      line-height: 1; } }
