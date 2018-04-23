@@ -1,15 +1,21 @@
 'use strict';
 
 $(document).ready(function() {
-	$('.js-section-scroll').on('click', function(e) {
-	  e.preventDefault();
-	  var section = $(this).attr('href').substr($(this).attr('href').indexOf('#'));
-	  var $section = $(section);
-
-	  $('html, body').animate({
-	    scrollTop: $section.offset().top + 'px'
-	  }, 1000);
-	});
+	function scrollNav() {
+  $('a').click(function(){  
+    //Toggle Class
+    $(".active").removeClass("active");      
+    $(this).closest('li').addClass("active");
+    var theClass = $(this).attr("class");
+    $('.'+theClass).parent('li').addClass('active');
+    //Animate
+    $('html, body').stop().animate({
+        scrollTop: $( $(this).attr('href') ).offset().top - 0
+    }, 400);
+    return false;
+  });
+}
+scrollNav();
 	$(".gallery").flipster({
 		style: 'carousel',
 	    spacing: -0.77,

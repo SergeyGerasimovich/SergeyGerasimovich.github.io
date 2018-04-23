@@ -310,7 +310,8 @@ h2.heading {
 
 .logo {
   position: relative;
-  top: 10px; }
+  top: 10px;
+  right: 10px; }
 
 .gallery {
   padding-bottom: 15px; }
