@@ -162,6 +162,8 @@ h2.heading {
   opacity: 0.9;
   box-shadow: 0px 0px 11px 0px rgba(0, 0, 0, 0.55);
   margin-top: 1.66em; }
+  .button a {
+    text-decoration: none; }
 
 .section {
   position: relative; }
@@ -186,7 +188,7 @@ h2.heading {
       padding: 0; }
   .section__text {
     position: relative;
-    padding-bottom: 1.21em;
+    padding-bottom: 0.758em;
     color: #fff;
     text-transform: uppercase; }
     .section__text::after {
@@ -247,7 +249,7 @@ h2.heading {
   .partners p {
     font-size: 22px;
     font-weight: 100;
-    color: rgba(125, 130, 133, 0.7);
+    color: white;
     line-height: 1.5; }
 
 .header {
@@ -261,12 +263,19 @@ h2.heading {
   height: 55px;
   background: #060606;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
   padding-left: 0.60em;
   box-shadow: -5px 7px 74px -2px rgba(0, 0, 0, 0.3); }
+
+.nav ul {
+  display: flex;
+  align-items: center; }
+
+.nav ul li {
+  display: flex; }
 
 .nav__item {
   color: #fff;
@@ -274,36 +283,27 @@ h2.heading {
   text-transform: uppercase;
   font-weight: 500;
   vertical-align: middle; }
-  .nav__item_right {
-    margin-right: 1.66em; }
-  .nav__item_left {
-    margin-left: 2.5em; }
+
+.nav__skype img {
+  height: 22px;
+  width: 24px; }
+
+.nav__mail img {
+  height: 25px;
+  width: 26px; }
+
+.nav__feedback {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #f59898;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  background-color: #202020;
+  border-bottom-right-radius: 7px; }
 
 .logo {
-  margin-top: 0.60em; }
-
-.contacts {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center; }
-  .contacts__skype img {
-    height: 22px;
-    width: 24px;
-    margin-right: 20px; }
-  .contacts__mail img {
-    height: 25px;
-    width: 26px;
-    margin-right: 20px; }
-  .contacts__feedback {
-    text-transform: uppercase;
-    font-size: 12px;
-    color: #f59898;
-    letter-spacing: 0.5px;
-    padding: 20px;
-    font-weight: 600;
-    background-color: #202020;
-    border-bottom-right-radius: 7px; }
+  position: relative;
+  top: 10px; }
 
 .gallery {
   padding-bottom: 15px; }
@@ -864,8 +864,9 @@ h2.heading {
   margin: 0 auto;
   display: grid;
   grid-template-columns: auto auto auto;
-  grid-template-rows: 4.54em 4.54em 4.54em;
-  grid-gap: 0.3em 0.3em; }
+  grid-template-rows: 5.6em 5.6em 5.6em;
+  grid-gap: 0.3em 0.3em;
+  padding: 0.9em 0 0.45em 0; }
   .suppliers__item {
     display: grid;
     align-items: center;
@@ -880,13 +881,13 @@ h2.heading {
 .account {
   display: flex;
   justify-content: center;
-  padding: 2.72em 0 3.93em 0; }
+  padding: 1.06em 0 3.93em 0; }
 
 .presentation {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-bottom: 0.68em;
+  padding-bottom: 0.55em;
   flex: 1 1 160.33px; }
   .presentation__item {
     position: relative;
@@ -928,7 +929,7 @@ h2.heading {
       opacity: 0;
       transition: all 0.2s ease-in-out 0s; }
     .presentation__item:hover .presentation__item-overlay {
-      opacity: 0.4; }
+      opacity: 0.7; }
 
 .register {
   max-width: 1280px;
@@ -936,7 +937,7 @@ h2.heading {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 6.06em 0; }
+  padding: 4.24em 0; }
   .register__item {
     position: relative;
     z-index: 1;
@@ -977,7 +978,7 @@ h2.heading {
     justify-content: space-between;
     flex-wrap: wrap; }
   .jackpot__text {
-    padding: 1.81em 0 1.36em 1.36em; }
+    padding: 1.81em 0 0.9em 1.36em; }
   .jackpot__interior {
     padding: 0 0.4em; }
   .jackpot__caption {

@@ -15,31 +15,35 @@
     <body>
         <div id="app">
             <header class="header">
-                <nav class="nav">
-                    <a href="#" class="nav__item nav__item_right">Продукт</a>
-                    <a href="#" class="nav__item nav__item_right">Поставщики игр</a>
-                    <a href="#" class="nav__item nav__item_right">Мультиканальность</a>
-                    <a href="#" class="nav__item">Виды регистраций</a>
+                <nav class="nav nav_left">
+                    <ul>
+                        <li><a href="#product" class="nav__item">Продукт</a></li>
+                        <li><a href="#suppliers" class="nav__item">Поставщики игр</a></li>
+                        <li><a href="#multichannel" class="nav__item">Мультиканальность</a></li>
+                        <li><a href="#registration" class="nav__item">Виды регистраций</a></li>
+                    </ul>
                 </nav>
                 <div class="logo">
                     <a href="#">
                         <img class="img-vegas" src="images/logo_vegas.png" alt="logo vegas kings">
                     </a>
                 </div>
-                <nav class="nav">
-                    <a href="#" class="nav__item nav__item_left">Стимуляция</a>
-                    <a href="#" class="nav__item nav__item_left">Партнерам</a>
-                    <a href="#" class="nav__item nav__item_left">Контакты</a>
+                <nav class="nav nav_right">
+                    <ul>
+                        <li><a href="#stimulation" class="nav__item">Стимуляция</a></li>
+                        <li><a href="#partners" class="nav__item">Партнерам</a></li>
+                        <li><a href="#contacts" class="nav__item">Контакты</a></li>
+                        <li><a href="#" class="nav__skype">
+                                <img src="images/skype.png" alt="skype">
+                            </a>
+                        </li>
+                        <li><a href="#" class="nav__mail">
+                                <img src="images/mail.png" alt="mail">
+                            </a>
+                        </li>
+                        <li><a href="#contacts" class="nav__feedback">Связаться</a></li>
+                    </ul>
                 </nav>
-                <div class="contacts">
-                    <a href="#" class="contacts__skype">
-                        <img src="images/skype.png" alt="skype">
-                    </a>
-                    <a href="#" class="contacts__mail">
-                        <img src="images/mail.png" alt="mail">
-                    </a>
-                    <a href="#" class="contacts__feedback">Связаться</a>
-                </div>
             </header>
             <main>
                 <!-- FIRST BLOCK START -->
@@ -47,11 +51,11 @@
                     <div class="section__text section__text_alterWidth">
                         <h1 class="heading"><span>Vegas Kings</span><br> Лучшее решение для бизнеса</h1>
                     </div>
-                    <div class="button">Связаться</div>
+                    <a class="button" href="#contacts">Связаться</a>
                 </section>
                 <!-- FIRST BLOCK END -->
                 <!-- SECOND BLOCK START -->
-                <section class="section section_games">
+                <section class="section section_games" id="product">
                     <div class="section__inner">
                        <div class="section__text">
                             <h2 class="heading"><span>Vegas Kings</span></h2>
@@ -110,7 +114,7 @@
                 </section>
                 <!-- SECOND BLOCK END -->
                 <!-- THIRD BLOCK START -->
-                <section class="section">
+                <section class="section" id="suppliers">
                      <div class="section__inner">
                        <div class="section__text section__text_suppliers section__text_alterWidth">
                             <h2 class="heading"><span>Поставщики игр</span></h2>
@@ -143,7 +147,7 @@
                 </section>
                 <!-- THIRD BLOCK END -->
                 <!-- FOURTH BLOCK START -->
-                <section class="section section_accounts">
+                <section class="section section_accounts" id="registration">
                      <div class="section__inner">
                        <div class="section__text section__text_alterWidth">
                             <h2 class="heading"><span>Единый аккаунт</span></h2>
@@ -156,7 +160,7 @@
                 </section>
                 <!-- FOURTH BLOCK END -->
                 <!-- FIFTH BLOCK START -->
-                <section class="section">
+                <section class="section" id="multichannel">
                     <div class="section__inner">
                        <div class="section__text section__text_center">
                             <h2 class="heading"><span>Мультиканальность</span></h2>
@@ -204,7 +208,7 @@
                 </section>
                 <!-- FIFTH BLOCK END -->
                 <!-- SIXTH BLOCK START -->
-                <section class="section section_register">
+                <section class="section section_register" id="registration">
                     <div class="section__inner">
                        <div class="section__text section__text_alterWidth">
                             <h2 class="heading"><span>Три варианта регистрации</span></h2>
@@ -228,7 +232,7 @@
                 </section>
                 <!-- SIXTH BLOCK END -->
                 <!-- SEVENTH BLOCK START -->
-                <section class="section section_players">
+                <section class="section section_players" id="stimulation">
                     <div class="section__inner">
                        <div class="section__text section__text_center">
                             <h2 class="heading"><span>Стимуляция активности игроков</span></h2>
@@ -373,7 +377,7 @@
                 </section>
                 <!-- SEVENTH BLOCK END -->
                 <!-- EIGHT BLOCK START -->
-                <section class="section">
+                <section class="section" id="partners">
                     <div class="section__inner">
                        <div class="section__text section__text_alterWidth">
                             <h2 class="heading"><span>Партнерам</span></h2>
@@ -447,7 +451,7 @@
                 <!-- NINTH BLOCK END -->
             </main>
             <footer>
-                <section class="section section_form">
+                <section class="section section_form" id="contacts">
                     <div class="section__inner">
                        <div class="section__text section__text_center section__text_alterWidth">
                             <h2 class="heading"><span>Станьте партнером и оцените <br>VEGAS KINGS на практике!</span></h2>
