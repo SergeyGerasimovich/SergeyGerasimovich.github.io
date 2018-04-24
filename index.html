@@ -15,7 +15,7 @@
     <body>
         <div id="app">
             <header class="header">
-                <nav class="nav">
+                <nav class="header__nav">
                     <ul class="menu menu_left">
                         <li><a href="#section1" class="menu__item nav-section1">Продукт</a></li>
                         <li><a href="#section2" class="menu__item nav-section2">Поставщики игр</a></li>
@@ -24,12 +24,12 @@
                         <li><a href="#section5" class="menu__item nav-section5">Виды регистраций</a></li>
                     </ul>
                 </nav>
-                <div class="logo">
+                <div class="header__logo">
                     <a href="#">
                         <img class="img-vegas" src="images/logo_vegas.png" alt="logo vegas kings">
                     </a>
                 </div>
-                <nav class="nav">
+                <nav class="header__nav">
                     <ul class="menu menu_right">
                         <li><a href="#section6" class="menu__item nav-section6">Стимуляция</a></li>
                         <li><a href="#section7" class="menu__item nav-section7">Партнерам</a></li>
@@ -54,7 +54,7 @@
                                 </g>
                             </svg>
                         </a>
-                        <a href="#section10" class="menu__feedback nav-section10">Связаться</a>
+                        <a href="#section10" class="contacts__feedback">Связаться</a>
                     </div>
                 </nav>
             </header>
@@ -168,7 +168,11 @@
                         </div>
                     </div>
                     <div class="account">
-                        <img src="images/account.png" srcset="images/account.png, images/account@2x.png 2x" alt="single account">
+                        <picture>
+                            <source media="(max-width: 480px)" srcset="images/account_mobile.png, images/account_mobile@2x.png 2x">
+                            <source media="(min-width: 481px)" srcset="images/account.png, images/account@2x.png 2x">
+                            <img src="images/account.png" srcset="images/account.png, images/account@2x.png 2x" alt="single account">
+                        </picture>
                     </div>
                 </section>
                 <!-- FOURTH BLOCK END -->

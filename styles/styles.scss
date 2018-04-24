@@ -237,16 +237,22 @@ h2.heading {
     border-bottom-right-radius: 7px;
     padding-left: 0.60em;
     box-shadow: -5px 7px 74px -2px rgba(0,0,0,0.3);
-}
-.nav {
-  display: flex;
 
-  & ul {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
+    &__nav {
+      display: flex;
+
+      & ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+    }
+    &__logo {
+      position: relative;
+      top: 10px;
+    }
 }
+
 .menu {
     
     &_left {
@@ -263,16 +269,23 @@ h2.heading {
         font-weight: 500;
         vertical-align: middle;
     }
-    & li a {
+    & a {
       transition: .2s all linear;
     }
-    & li a:hover {
+    & a:hover {
       border-bottom: 2px solid #fff;
     }
     & li.active a {
       border-bottom: 2px solid #fff;
     }
-    &__feedback {
+}
+.contacts {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 6em;
+
+  &__feedback {
       text-transform: uppercase;
       font-size: 12px;
       color: $light-pink;
@@ -283,26 +296,6 @@ h2.heading {
       padding: 1.75em 1.9em;
     }
 }
-.logo {
-    position: relative;
-    top: 10px;
-}
-.contacts {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 6em;
-}
-.menu a {
-    transition: .2s all linear;
-}
-.menu a:hover {
-    border-bottom: 2px solid #fff;
-}
-.menu li.active a {
-    border-bottom: 2px solid #fff;
-}
-
 .gallery {
     padding-bottom: 15px;
 
@@ -1515,14 +1508,15 @@ h2.heading {
             padding: 3.93em 1.2em 1.81em 1.2em;
         }
     }
-
-
-
     .header {
-        justify-content: center;
-    }
-    .nav {
+      justify-content: center;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      height: 50px;
+
+      &__nav {
         display: none;
+      }
     }
     .contacts {
         display: none;
@@ -1645,13 +1639,15 @@ h2.heading {
 
         }
     }
-
-
     .header {
-        justify-content: center;
-    }
-    .nav {
+      justify-content: center;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      height: 50px;
+
+      &__nav {
         display: none;
+      }
     }
     .contacts {
         display: none;
@@ -1790,13 +1786,13 @@ h2.heading {
 /* Landscape phones and smaller */
 @media (max-width: 480px) {
     body {
-        font-size: 14px;
+        font-size: 18px;
     }
     h1.heading {
-        font-size: 32px;
+        font-size: 36px;
     }
     h2.heading {
-        font-size: 28px;
+        font-size: 32px;
     }
     .section {
         
@@ -1806,14 +1802,22 @@ h2.heading {
         &__inner {
             padding: 3.93em 1.2em 1.81em 1.2em;
         }
+        &_partners {
+          overflow: hidden;
+        }
     }
-
-
     .header {
-        justify-content: center;
-    }
-    .nav {
+      justify-content: center;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      height: 40px;
+
+      &__logo {
+        top: 15px;
+      }
+      &__nav {
         display: none;
+      }
     }
     .contacts {
         display: none;
@@ -1822,13 +1826,17 @@ h2.heading {
 
 
     .button {
-        font-size: 10px;
+        font-size: 11px;
     }
     .suppliers {
         grid-template-columns: auto auto;
         grid-template-rows: 6.54em 6.54em 6.54em 6.54em;
         padding: 0.3em;
 
+        img {
+          max-width: 75%;
+          margin: 0 auto;
+        }
         &__item {
 
             &:nth-child(1) {
@@ -1848,7 +1856,7 @@ h2.heading {
         padding: 2.72em 0.5em 3.93em 0.5em;
 
         & img {
-            max-height: 7.5em;
+            max-height: 100%;
         }
     }
     .presentation {
@@ -1916,10 +1924,10 @@ h2.heading {
             justify-content: space-around;
         }
         &-wb__text-wrap svg {
-            width: 6.5em;
+            width: 5em;
         }
         &-wb__num-box {
-            font-size: 40px;
+            font-size: 36px;
         }
     }
     .conditions {
@@ -1947,12 +1955,16 @@ h2.heading {
         }
     }
     .partners {
-      bottom: 3vw;
-      right: 4vw;
+      bottom: 9vw;
+      right: 6vw;
 
+      &-img {
+        position: relative;
+        right: 45vw;
+        max-width: 175%;
+      }
         p {
-            font-size: 10px;
-            line-height: 1;
+            font-size: 11px;
         }
     }
 }
