@@ -15,7 +15,7 @@ $(document).ready(function() {
 	     if ($(this).offset().top < fromTop)
 	       return this;
 	   });
-	   cur = cur[cur.length-0];
+	   cur = cur[cur.length-1];
 	   var id = cur && cur.length ? cur[0].id : "";
 	   if (lastId !== id) {
 	       lastId = id;
@@ -42,4 +42,4 @@ $(document).ready(function() {
 		    spacing: -0.77,
 		    start: 0
 		});
-	});
+});
