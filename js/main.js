@@ -1,6 +1,11 @@
 'use strict';
 
 $(document).ready(function() {
+	var burger = document.querySelector('.burger-container'),
+	    header = document.querySelector('.header');
+	burger.onclick = function() {
+	    header.classList.toggle('menu-opened');
+	  }
 	var lastId,
 		menu = $(".menu"),
 	    menuHeight = menu.outerHeight()+15,
@@ -28,6 +33,7 @@ $(document).ready(function() {
   		$('a').click(function(){  
 		    $(".active").removeClass("active");      
 		    $(this).closest('li').addClass("active");
+		    $(".header").removeClass("menu-opened");
 		    var theClass = $(this).attr("class");
 		    $('.'+theClass).parent('li').addClass('active');
 		    $('html, body').stop().animate({
@@ -37,9 +43,10 @@ $(document).ready(function() {
 	  	});
 	}
 	scrollNav();
-		$(".gallery").flipster({
-			style: 'carousel',
-		    spacing: -0.77,
-		    start: 0
-		});
+	$(".gallery").flipster({
+		style: 'carousel',
+	    spacing: -0.77,
+	    start: 0
+	});
+
 });
