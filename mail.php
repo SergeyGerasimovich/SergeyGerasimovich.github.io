@@ -1,7 +1,17 @@
-<?
-if (isset($_POST['m_data'])) {$m_data = $_POST['m_data'];}
-if (isset($_POST['toEmail'])) {$toEmail = $_POST['toEmail'];}
-if (isset($_POST['fromEmail'])) {$fromEmail = $_POST['fromEmail'];}
-if (isset($_POST['them'])) {$them = $_POST['them'];}
+<?php
+if ($_POST[name]!="" && $_POST[tel]!="" && $_POST[email]!="") {
+	$allmsg="";
+	$headers = NULL;
+	$headers .= "Content-Type: text.html; charset=utf8\r\n";
+	$headers .= "From: <sherasymovych@firstgaming.com>\r\n";
 
-$send = mail($toEmail,$them,$m_data,"Content-type:text/plain; charset = utf-8\r\nFrom:$fromEmail");
+	$allmsg .= "
+		Имя: $_POST[name] <br/>
+		Телефон: $_POST[tel] <br/>
+		Электронная почта: $_POST[email] <br/>
+	";
+	mail("serhiiherasymovych@gmail.com", $allmsg, $headers);
+	header("Location: ./index.html");
+	echo"<script>document.location.href = './index.html';</script>";
+}
+?>
