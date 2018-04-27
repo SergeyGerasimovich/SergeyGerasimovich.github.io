@@ -11,7 +11,6 @@
         <script src="js/jquery.min.js"></script>
         <script src="js/jquery.carousel.js"></script>
         <script src="js/main.js"></script>
-        <script src="js/feedback.js"></script>
     </head>
     <body>
         <div id="app">
@@ -479,7 +478,7 @@
                         </div>
                     </div>
                     <div class="footer">
-                        <form action="#">
+                        <form action="./mail.php" method="post">
                             <div class="footer__input">
                                 <div class="footer__input_div-input">
                                     <label for="name"></label>
@@ -494,7 +493,7 @@
                                     <input name="email" class="footer__item" type="text" placeholder="EMAIL">
                                 </div>
                                 <div class="footer__button_div-button feedback">
-                                    <div class="button" name="send">Связаться</div>
+                                    <input class="button" type="submit" name="send">Связаться</input>
                                 </div>
                             </div>
                         </form>
