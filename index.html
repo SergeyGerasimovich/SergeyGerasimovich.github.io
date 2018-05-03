@@ -15,13 +15,13 @@
     <body>
         <div id="app">
             <header class="header">
-                <div class="burger-container">
+                <div class="header__burger-container">
                     <div id="burger">
                         <div class="bar topBar"></div>
                         <div class="bar btmBar"></div>
                     </div>
                 </div>
-                <div class="icon icon-apple"></div>
+                <div class="header__icon"></div>
                     <nav class="nav">
                         <ul class="menu">
                             <li class="menu__item"><a href="#section1">Продукт</a></li>
@@ -35,8 +35,8 @@
                             <li class="menu__item"><a href="#section9">Старт</a></li>
                         </ul>
                     </nav>
-                <div class="header__logo">
-                    <a href="#">
+                <div class="header__logo top">
+                    <a href="#" class="logo__link">
                         <img src="images/logo_vegas.png" alt="logo vegas kings">
                     </a>
                 </div>
@@ -189,40 +189,34 @@
                     </div>
                     <div class="presentation">
                         <div class="presentation__item">
-                            <a href="#">
-                                <div class="presentation__item-overlay"></div>
-                                <figure class="presentation__item_info">
-                                    <h5>Клубная Версия</h5>
-                                    <img src="images/club-item.jpg" srcset="images/club-item.jpg, images/club-item@2x.jpg 2x" alt="club version">
-                                    <figcaption class="presentation__item_pop-up">
-                                        <p>Версия, адаптированная для <br>игры на терминалах в клубе</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
+                            <div class="presentation__item-overlay"></div>
+                            <figure class="presentation__item_info">
+                                <h5>Клубная Версия</h5>
+                                <img src="images/club-item.jpg" srcset="images/club-item.jpg, images/club-item@2x.jpg 2x" alt="club version">
+                                <figcaption class="presentation__item_pop-up">
+                                    <p>Версия, адаптированная для <br>игры на терминалах в клубе</p>
+                                </figcaption>
+                            </figure>
                         </div>
                         <div class="presentation__item">
-                            <a href="#">
-                                <div class="presentation__item-overlay"></div>
-                                <figure class="presentation__item_info">
-                                    <h5>Онлайн Версия</h5>
-                                    <img src="images/online-item.jpg" srcset="images/online-item.jpg, images/online-item@2x.jpg 2x" alt="online version">
-                                    <figcaption class="presentation__item_pop-up">
-                                        <p>Версия, позволяющая при <br>наличии регистрации играть <br>с любого компьютера</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
+                            <div class="presentation__item-overlay"></div>
+                            <figure class="presentation__item_info">
+                                <h5>Онлайн Версия</h5>
+                                <img src="images/online-item.jpg" srcset="images/online-item.jpg, images/online-item@2x.jpg 2x" alt="online version">
+                                <figcaption class="presentation__item_pop-up">
+                                    <p>Версия, позволяющая при <br>наличии регистрации играть <br>с любого компьютера</p>
+                                </figcaption>
+                            </figure>
                         </div>
                         <div class="presentation__item">
-                            <a href="">
-                                <div class="presentation__item-overlay"></div>
-                                <figure class="presentation__item_info">
-                                    <h5>Мобайл Версия</h5>
-                                    <img src="images/mobile-item.jpg" srcset="images/mobile-item.jpg, images/mobile-item@2x.jpg 2x" alt="mobile version">
-                                    <figcaption class="presentation__item_pop-up">
-                                        <p>Позволяющая при наличии <br>регистрации играть со смартфона, <br>планшета, находясь где угодно</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
+                            <div class="presentation__item-overlay"></div>
+                            <figure class="presentation__item_info">
+                                <h5>Мобайл Версия</h5>
+                                <img src="images/mobile-item.jpg" srcset="images/mobile-item.jpg, images/mobile-item@2x.jpg 2x" alt="mobile version">
+                                <figcaption class="presentation__item_pop-up">
+                                    <p>Позволяющая при наличии <br>регистрации играть со смартфона, <br>планшета, находясь где угодно</p>
+                                </figcaption>
+                            </figure>
                         </div>
                     </div>
                 </section>
@@ -482,18 +476,19 @@
                             <div class="footer__input">
                                 <div class="footer__input_div-input">
                                     <label for="name"></label>
-                                    <input name="name" class="footer__item" type="text" placeholder="Имя">
+                                    <input name="name" id="name" class="footer__item" type="text" placeholder="Имя" pattern="[А-Яа-яЁё]{,3}" title="Поле 'Имя' должно состоять от 3-х букв." required>
                                 </div>
                                 <div class="footer__input_div-input">
                                     <label for="tel"></label>
-                                    <input name="tel" class="footer__item" type="tel" placeholder="Телефон">
+                                    <input name="tel" id="tel" class="footer__item" type="tel" placeholder="Телефон" pattern="[0-9]{5,14}"
+                                    title="Поле 'Телефон' должно состоять от 5 до 14 цифр." required>
                                 </div>
                                 <div class="footer__input footer__input_div-input">
                                     <label for="email"></label>
-                                    <input name="email" class="footer__item" type="text" placeholder="EMAIL">
+                                    <input name="email" id="email" class="footer__item" type="email" placeholder="EMAIL" required>
                                 </div>
-                                <div class="footer__button_div-button feedback">
-                                    <div class="button" name="send">Связаться</div>
+                                <div class="footer__button_div-button">
+                                    <input type="submit" class="button" name="send">
                                 </div>
                             </div>
                         </form>

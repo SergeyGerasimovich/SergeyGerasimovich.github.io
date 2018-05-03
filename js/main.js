@@ -1,10 +1,12 @@
 'use strict';
 
 $(document).ready(function() {
-	var burger = document.querySelector('.burger-container'),
-	    header = document.querySelector('.header');
+	var burger = document.querySelector('.header__burger-container'),
+	    header = document.querySelector('.header'),
+	    body = document.querySelector("body");
 	burger.onclick = function() {
-	    header.classList.toggle('menu-opened');
+	    header.classList.toggle('menu-opened'),
+	    body.classList.toggle("body-opened");
 	  }
 	var lastId,
 		menu = $(".menu"),
@@ -34,6 +36,7 @@ $(document).ready(function() {
 		    $(".active").removeClass("active");      
 		    $(this).closest('li').addClass("active");
 		    $(".header").removeClass("menu-opened");
+		    $("body").removeClass("body-opened");
 		    var theClass = $(this).attr("class");
 		    $('.'+theClass).parent('li').addClass('active');
 		    $('html, body').stop().animate({
@@ -48,4 +51,50 @@ $(document).ready(function() {
 	    spacing: -0.77,
 	    start: 0
 	});
+	function myFunction() {
+		    if (x.matches) {
+		        $(".gallery").flipster({
+		        	spacing: -0.6,
+		        	start: 0,
+		    		buttons: true
+		        })
+		    }
+		    else if (y.matches) {
+		    	$(".gallery").flipster({
+		    		spacing: -0.7,
+		    		start: 0,
+		    		buttons: true
+		    	})
+		    }
+		    else if (z.matches) {
+		    	$(".gallery").flipster({
+		    		spacing: -0.8,
+		    		start: 0,
+		    		buttons: true
+		    	})
+		    }
+		    else if (t.matches) {
+		    	$(".gallery").flipster({
+		    		spacing: -0.87,
+		    		start: 0,
+		    		buttons: true
+		    	})
+		    }
+		    else {
+		    	$(".gallery").flipster({
+		    		spacing: -0.77,
+		    		start: 0,
+		    		buttons: false
+		    	})
+		    }
+		}
+	var x = window.matchMedia("(min-width: 320px) and (max-width: 480px)"),
+		y = window.matchMedia("(min-width: 481px) and (max-width: 768px)"),
+		z = window.matchMedia("(min-width: 769px) and (max-width: 991px)"),
+		t = window.matchMedia("(min-width: 992px) and (max-width: 1279px)");
+	myFunction()
+	x.addListener(myFunction)
+	y.addListener(myFunction)
+	z.addListener(myFunction)
+	t.addListener(myFunction)
 });
