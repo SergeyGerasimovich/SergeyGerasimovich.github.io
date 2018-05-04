@@ -1,6 +1,14 @@
 'use strict';
 
 $(document).ready(function() {
+	$(window).scroll(function(){
+    if ($(window).scrollTop() > 450) {
+        $('.contacts__feedback').addClass('contacts__feedback_scroll');
+    }
+    else {
+        $('.contacts__feedback').removeClass('contacts__feedback_scroll')
+    }
+	});
 	var burger = document.querySelector('.header__burger-container'),
 	    header = document.querySelector('.header'),
 	    body = document.querySelector("body");
@@ -48,49 +56,43 @@ $(document).ready(function() {
 	scrollNav();
 	$(".gallery").flipster({
 		style: 'carousel',
-	    spacing: -0.77,
 	    start: 0
 	});
 	function myFunction() {
 		    if (x.matches) {
 		        $(".gallery").flipster({
-		        	spacing: -0.6,
+		        	spacing: -0.94,
 		        	start: 0,
-		    		buttons: true
 		        })
 		    }
 		    else if (y.matches) {
 		    	$(".gallery").flipster({
-		    		spacing: -0.7,
+		    		spacing: -0.92,
 		    		start: 0,
-		    		buttons: true
 		    	})
 		    }
 		    else if (z.matches) {
 		    	$(".gallery").flipster({
-		    		spacing: -0.8,
+		    		spacing: -0.87,
 		    		start: 0,
-		    		buttons: true
 		    	})
 		    }
 		    else if (t.matches) {
 		    	$(".gallery").flipster({
-		    		spacing: -0.87,
+		    		spacing: -0.85,
 		    		start: 0,
-		    		buttons: true
 		    	})
 		    }
 		    else {
 		    	$(".gallery").flipster({
 		    		spacing: -0.77,
 		    		start: 0,
-		    		buttons: false
 		    	})
 		    }
 		}
 	var x = window.matchMedia("(min-width: 320px) and (max-width: 480px)"),
-		y = window.matchMedia("(min-width: 481px) and (max-width: 768px)"),
-		z = window.matchMedia("(min-width: 769px) and (max-width: 991px)"),
+		y = window.matchMedia("(min-width: 481px) and (max-width: 767px)"),
+		z = window.matchMedia("(min-width: 768px) and (max-width: 991px)"),
 		t = window.matchMedia("(min-width: 992px) and (max-width: 1279px)");
 	myFunction()
 	x.addListener(myFunction)

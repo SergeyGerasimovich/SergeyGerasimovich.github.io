@@ -255,25 +255,25 @@ h2.heading {
   flex: 1;
   padding-right: 0.7em;
 
-    &__item a {
+    &__item {
+
+      a {
         color: $white;
         font-size: 11px;
         text-transform: uppercase;
         font-weight: 500;
         vertical-align: middle;
-
+        padding-bottom: 12px;
+      }
     }
     & li:nth-child(5) {
-          margin-right: 200px;
-        }
-    &__item a {
-      transition: .2s all linear;
+      margin-right: 200px;
     }
     &__item a:hover {
-      box-shadow: 0 2px 0 $white;
+      box-shadow: 0 2px 0 -0.4px $white;
     }
     & li.active a {
-      box-shadow: 0 2px 0 $white;
+      box-shadow: 0 2px 0 -0.4px $white;
     }
 }
 .contacts {
@@ -283,15 +283,20 @@ h2.heading {
   width: 6em;
 
   &__feedback {
-      text-transform: uppercase;
-      font-size: 12px;
-      color: $light-pink;
-      letter-spacing: 0.5px;
-      font-weight: 600;
-      background-color: #202020;
-      border-bottom-right-radius: 7px;
-      padding: 1.75em 1.9em;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: $light-pink;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+    background-color: #202020;
+    border-bottom-right-radius: 7px;
+    padding: 1.75em 1.9em;
+
+    &_scroll {
+      background: $dark-pink;
+      color: $white;
     }
+  }
 }
 .gallery {
     padding-bottom: 0.454em;
@@ -315,17 +320,8 @@ h2.heading {
   overflow-y: hidden;
   overflow-x: hidden;
 }
-.flipster__item img {
-  max-width: 100%;
-}
-/*.flipster__item--past .flipster__item__content {
-  transform-origin: 0% 50% !important;
-  transform: scale(0.75) rotateY(20deg) !important;
-}*/
 .flipster__item--future .flipster__item__content {
     text-align: right;
-    /*transform-origin: 80% 50% !important;
-    transform: scale(0.75) rotateY(-20deg) !important;*/
 }
 /*CARDS*/
 .card_1 {
@@ -991,8 +987,6 @@ h2.heading {
     z-index: 10;
   }
 }
-
-
 /*CAROUSEL END*/
 .suppliers {
     max-width: 1280px;
@@ -1142,7 +1136,11 @@ h2.heading {
         padding: 1.81em 0 0.9em 1.36em;
     }
     &__interior {
-        padding: 0 0.4em;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1 1 50%;
+      padding: 0 0.4em;
     }
     &__caption {
         font-size: 18px;
@@ -1400,24 +1398,6 @@ h2.heading {
 }
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1279px) {
-    /*.flipster {
-      overflow-y: hidden;
-      overflow-x: hidden;
-    }
-    .flipster--coverflow .flipster__item__content {
-      transform-origin: 50% 50%;
-    }
-    .flipster--carousel .flipster__item--current .flipster__item__content {
-      transform: translateX(0) rotateY(0deg) scale(0.6);
-    }
-    .flipster--coverflow .flipster__item--future .flipster__item__content {
-      transform-origin: 60% 50%;
-      transform: scale(0.35) rotateY(-50deg);
-    }
-    .flipster--coverflow .flipster__item--past .flipster__item__content {
-      transform-origin: 40% 50%;
-      transform: scale(0.35) rotateY(50deg);
-    }*/
     body {
       font-size: 28px;
     }
@@ -1438,7 +1418,9 @@ h2.heading {
     }
     .header {
       display: flex;
-      align-items: inherit;
+      align-items: center;
+      justify-content: normal;
+      flex-direction: column;
       top: 0;
       left: 0;
       height: 50px;
@@ -1463,7 +1445,7 @@ h2.heading {
         }
       }
       &__burger-container {
-        position: relative;
+        position: absolute;
         display: inline-block;
         height: 50px;
         left: 96%;
@@ -1513,8 +1495,9 @@ h2.heading {
       }
       & ul.menu {
         position: relative;
-        display: block;
-        padding: 3.5em 1.2em;
+        display: flex;
+        flex-direction: column;
+        padding: 3.5em 1.2em 1em 1.2em;
         list-style: none;
 
         & li.menu__item {
@@ -1528,11 +1511,12 @@ h2.heading {
             position: relative;
             color: $white;
             font-weight: 100;
-            font-size: 19px;
+            font-size: 18px;
             text-transform: inherit;
             line-height: 2.35;
             font-weight: 300;
             width: 100%;
+            padding: 0;
           }
         }
       }
@@ -1573,24 +1557,72 @@ h2.heading {
           &:nth-child(8) {transition-delay: 0.76s;}
           &:nth-child(9) {transition-delay: 0.83s;}
         }
+        & .contacts a {
+          visibility: visible;
+          transition-delay: 0s;
+          transform: translateZ(0);
+          opacity: 1;
+
+          &:nth-child(1) {transition-delay: 1.15s;}
+          &:nth-child(2) {transition-delay: 1.15s;}
+        }
       }
     }
     .nav {
+      flex: none;
       visibility: hidden;
       transition: visibility 0s linear 1s;
-      padding: 0.5em 1em 0 0;
-    }
-    .contacts {
-      display: none;
+      padding: 0;
+      width: 100%;
     }
     .menu {
-        
+
         & li:nth-of-type(5) {
           margin-right: 0;
         }
     }
+    .contacts {
+      visibility: hidden;
+      transition: visibility 0s linear 1s;
+
+      &__feedback {
+        display: none;
+      }
+    }
+    .icon {
+      width: 50px;
+      height: 50px;
+    }
     .button {
         font-size: 14px;
+    }
+    #coverflow {
+      margin-top: -5em;
+    }
+    .flipster {
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    .flipster__button {
+      color: $white;
+      opacity: 0.8;
+    }
+    .flipster--coverflow .flipster__item__content {
+      transform-origin: 50% 50%;
+    }
+    .flipster--carousel .flipster__item--current .flipster__item__content {
+      transform: translateX(0) rotateY(0deg) scale(0.6);
+    }
+    .flipster--coverflow .flipster__item--future .flipster__item__content {
+      transform-origin: 60% 50%;
+      transform: scale(0.35) rotateY(-50deg);
+    }
+    .flipster--coverflow .flipster__item--past .flipster__item__content {
+      transform-origin: 40% 50%;
+      transform: scale(0.35) rotateY(50deg);
+    }
+    ul.flip-items.flipster__container {
+      height: 500px!important;
     }
     .suppliers {
         padding: 0.3em;
@@ -1690,7 +1722,9 @@ h2.heading {
     }
     .header {
       display: flex;
-      align-items: inherit;
+      align-items: center;
+      justify-content: normal;
+      flex-direction: column;
       top: 0;
       left: 0;
       height: 50px;
@@ -1715,7 +1749,7 @@ h2.heading {
         }
       }
       &__burger-container {
-        position: relative;
+        position: absolute;
         display: inline-block;
         height: 50px;
         left: 95%;
@@ -1765,8 +1799,9 @@ h2.heading {
       }
       & ul.menu {
         position: relative;
-        display: block;
-        padding: 3.5em 1.2em;
+        display: flex;
+        flex-direction: column;
+        padding: 3.5em 1.2em 1em 1.2em;
         list-style: none;
 
         & li.menu__item {
@@ -1785,6 +1820,7 @@ h2.heading {
             line-height: 2.35;
             font-weight: 300;
             width: 100%;
+            padding: 0;
           }
         }
       }
@@ -1825,28 +1861,72 @@ h2.heading {
           &:nth-child(8) {transition-delay: 0.76s;}
           &:nth-child(9) {transition-delay: 0.83s;}
         }
+        & .contacts a {
+          visibility: visible;
+          transition-delay: 0s;
+          transform: translateZ(0);
+          opacity: 1;
+
+          &:nth-child(1) {transition-delay: 1.15s;}
+          &:nth-child(2) {transition-delay: 1.15s;}
+        }
       }
     }
     .nav {
+      flex: none;
       visibility: hidden;
       transition: visibility 0s linear 1s;
-      padding: 0.5em 1em 0 0;
+      padding: 0;
+      width: 100%;
     }
     .menu {
-        
+
         & li:nth-of-type(5) {
           margin-right: 0;
         }
     }
     .contacts {
+      visibility: hidden;
+      transition: visibility 0s linear 1s;
+
+      &__feedback {
         display: none;
+      }
     }
-
-
-
-
+    .icon {
+      width: 45px;
+      height: 45px;
+    }
     .button {
         font-size: 13px;
+    }
+    #coverflow {
+      margin-top: -4em;
+    }
+    .flipster {
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    .flipster__button {
+      color: $white;
+      opacity: 0.8;
+    }
+    .flipster--coverflow .flipster__item__content {
+      transform-origin: 50% 50%;
+    }
+    .flipster--carousel .flipster__item--current .flipster__item__content {
+      transform: translateX(0) rotateY(0deg) scale(0.6);
+    }
+    .flipster--coverflow .flipster__item--future .flipster__item__content {
+      transform-origin: 60% 50%;
+      transform: scale(0.35) rotateY(-50deg);
+    }
+    .flipster--coverflow .flipster__item--past .flipster__item__content {
+      transform-origin: 40% 50%;
+      transform: scale(0.35) rotateY(50deg);
+    }
+    ul.flip-items.flipster__container {
+      height: 500px!important;
     }
     .suppliers {
         padding: 0.3em;
@@ -1995,7 +2075,9 @@ h2.heading {
     }
     .header {
       display: flex;
-      align-items: inherit;
+      align-items: center;
+      justify-content: normal;
+      flex-direction: column;
       top: 0;
       left: 0;
       height: 50px;
@@ -2020,7 +2102,7 @@ h2.heading {
         }
       }
       &__burger-container {
-        position: relative;
+        position: absolute;
         display: inline-block;
         height: 50px;
         left: 93%;
@@ -2070,8 +2152,9 @@ h2.heading {
       }
       & ul.menu {
         position: relative;
-        display: block;
-        padding: 3.5em 1.2em;
+        display: flex;
+        flex-direction: column;
+        padding: 3.5em 1.2em 1em 1.2em;
         list-style: none;
 
         & li.menu__item {
@@ -2085,11 +2168,12 @@ h2.heading {
             position: relative;
             color: $white;
             font-weight: 100;
-            font-size: 17px;
+            font-size: 18px;
             text-transform: inherit;
             line-height: 2.35;
             font-weight: 300;
             width: 100%;
+            padding: 0;
           }
         }
       }
@@ -2130,27 +2214,71 @@ h2.heading {
           &:nth-child(8) {transition-delay: 0.76s;}
           &:nth-child(9) {transition-delay: 0.83s;}
         }
+        & .contacts a {
+          visibility: visible;
+          transition-delay: 0s;
+          transform: translateZ(0);
+          opacity: 1;
+
+          &:nth-child(1) {transition-delay: 1.15s;}
+          &:nth-child(2) {transition-delay: 1.15s;}
+        }
       }
     }
     .nav {
+      flex: none;
       visibility: hidden;
       transition: visibility 0s linear 1s;
-      padding: 0.5em 1em 0 0;
+      padding: 0;
+      width: 100%;
     }
     .menu {
-        
+
         & li:nth-of-type(5) {
           margin-right: 0;
         }
     }
     .contacts {
+      visibility: hidden;
+      transition: visibility 0s linear 1s;
+
+      &__feedback {
         display: none;
+      }
     }
-
-
-
+    .icon {
+      width: 45px;
+      height: 45px;
+    }
     .button {
         font-size: 12px;
+    }
+    #coverflow {
+      margin-top: -5em;
+    }
+    .flipster {
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    .flipster--coverflow .flipster__item__content {
+      transform-origin: 50% 50%;
+    }
+    .flipster--carousel .flipster__item--current .flipster__item__content {
+      transform: translateX(0) rotateY(0deg) scale(0.5);
+    }
+    .flipster--coverflow .flipster__item--future .flipster__item__content {
+      transform-origin: 60% 50%;
+      transform: scale(0.32) rotateY(-50deg);
+    }
+    .flipster--coverflow .flipster__item--past .flipster__item__content {
+      transform-origin: 40% 50%;
+      transform: scale(0.32) rotateY(50deg);
+    }
+    ul.flip-items.flipster__container {
+      height: 500px!important;
+    }
+    .flipster--coverflow .flipster__container, .flipster--coverflow .flipster__item, .flipster--coverflow .flipster__item__content {
+      transition: all 140ms ease-in-out;
     }
     .suppliers {
         grid-template-columns: auto auto;
@@ -2339,7 +2467,9 @@ h2.heading {
     }
     .header {
       display: flex;
-      align-items: inherit;
+      align-items: center;
+      justify-content: normal;
+      flex-direction: column;
       top: 0;
       left: 0;
       height: 50px;
@@ -2364,7 +2494,7 @@ h2.heading {
         }
       }
       &__burger-container {
-        position: relative;
+        position: absolute;
         display: inline-block;
         height: 50px;
         left: 91%;
@@ -2414,8 +2544,9 @@ h2.heading {
       }
       & ul.menu {
         position: relative;
-        display: block;
-        padding: 3.5em 1.2em;
+        display: flex;
+        flex-direction: column;
+        padding: 3.5em 1.2em 1em 1.2em;
         list-style: none;
 
         & li.menu__item {
@@ -2434,6 +2565,7 @@ h2.heading {
             line-height: 2.35;
             font-weight: 300;
             width: 100%;
+            padding: 0;
           }
         }
       }
@@ -2474,21 +2606,71 @@ h2.heading {
           &:nth-child(8) {transition-delay: 0.76s;}
           &:nth-child(9) {transition-delay: 0.83s;}
         }
+        & .contacts a {
+          visibility: visible;
+          transition-delay: 0s;
+          transform: translateZ(0);
+          opacity: 1;
+
+          &:nth-child(1) {transition-delay: 1.15s;}
+          &:nth-child(2) {transition-delay: 1.15s;}
+        }
       }
     }
     .nav {
+      flex: none;
       visibility: hidden;
       transition: visibility 0s linear 1s;
-      padding: 0.5em 1em 0 0;
+      padding: 0;
+      width: 100%;
     }
     .menu {
-        
+
         & li:nth-of-type(5) {
           margin-right: 0;
         }
     }
+    .contacts {
+      visibility: hidden;
+      transition: visibility 0s linear 1s;
+
+      &__feedback {
+        display: none;
+      }
+    }
+    .icon {
+      width: 40px;
+      height: 40px;
+    }
     .button {
         font-size: 13px;
+    }
+    #coverflow {
+      margin-top: -8em;
+    }
+    .flipster {
+      overflow-y: hidden;
+      overflow-x: hidden;
+    }
+    .flipster--coverflow .flipster__item__content {
+      transform-origin: 50% 50%;
+    }
+    .flipster--carousel .flipster__item--current .flipster__item__content {
+      transform: translateX(0) rotateY(0deg) scale(0.37);
+    }
+    .flipster--coverflow .flipster__item--future .flipster__item__content {
+      transform-origin: 60% 50%;
+      transform: scale(0.28) rotateY(-35deg);
+    }
+    .flipster--coverflow .flipster__item--past .flipster__item__content {
+      transform-origin: 40% 50%;
+      transform: scale(0.28) rotateY(35deg);
+    }
+    ul.flip-items.flipster__container {
+      height: 430px!important;
+    }
+    .flipster--coverflow .flipster__container, .flipster--coverflow .flipster__item, .flipster--coverflow .flipster__item__content {
+      transition: all 100ms ease-in-out;
     }
     .suppliers {
         grid-template-columns: auto auto;
