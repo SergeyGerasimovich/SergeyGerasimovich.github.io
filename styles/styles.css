@@ -1151,8 +1151,8 @@ h2.heading {
   width: 100%;
   border: none;
   outline: none;
-  padding: 0 0 0.2em 0.1em;
-  font-size: 20px;
+  padding: 0 0 0.8em 0.1em;
+  font-size: 16px;
   color: #fff; }
 
 .footer :focus::-webkit-input-placeholder {
@@ -1416,7 +1416,7 @@ h2.heading {
   .description p {
     font-size: 16px; }
   .footer__item {
-    font-size: 18px; } }
+    font-size: 15px; } }
 
 /* Portrait tablets and small desktops */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1659,7 +1659,7 @@ h2.heading {
       top: 7%;
       right: 25.5%; }
   .footer__item {
-    font-size: 17px; } }
+    font-size: 14px; } }
 
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
@@ -1935,7 +1935,7 @@ h2.heading {
       top: 5.5%;
       right: 22.5%; }
   .footer__item {
-    font-size: 16px; }
+    font-size: 13px; }
   .footer__text p {
     font-size: 11px; } }
 
@@ -2234,6 +2234,6 @@ h2.heading {
       top: 3.5%;
       right: 11.5%; }
   .footer__item {
-    font-size: 14px; }
+    font-size: 12px; }
   .footer__text p {
     font-size: 10px; } }
