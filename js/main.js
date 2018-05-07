@@ -99,4 +99,16 @@ $(document).ready(function() {
 	y.addListener(myFunction)
 	z.addListener(myFunction)
 	t.addListener(myFunction)
+	if ("ontouchstart" in document.documentElement) {
+	document.documentElement.className += " touch";
+	}
+	jQuery('.touch .presentation').each(function() {
+	  var div = jQuery(this);
+	  div.hover(function() {
+	    div.removeClass('no-hover');
+	  });
+	  jQuery('*').not(div).bind('click', function() {
+	    div.addClass('no-hover');
+	  });
+});
 });

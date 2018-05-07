@@ -1071,7 +1071,7 @@ h2.heading {
       -webkit-transform: translate(0%, 0%);
       transform: translate(0%, 0%);
       transition: all 0.21s ease-in-out 0.13s; }
-    .presentation__item:hover .presentation__item_pop-up, .presentation__item:focus .presentation__item_pop-up {
+    .presentation__item:hover .presentation__item_pop-up {
       top: 18.3%;
       left: 7.4%;
       opacity: 1; }
@@ -1082,7 +1082,7 @@ h2.heading {
       width: 100%;
       opacity: 0;
       transition: all 0.2s ease-in-out 0s; }
-    .presentation__item:hover .presentation__item-overlay, .presentation__item:focus .presentation__item-overlay {
+    .presentation__item:hover .presentation__item-overlay {
       opacity: 0.7; }
 
 .register {
