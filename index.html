@@ -26,12 +26,12 @@
                         <ul class="menu">
                             <li class="menu__item"><a href="#section1">Продукт</a></li>
                             <li class="menu__item"><a href="#section2">Поставщики игр</a></li>
-                            <li class="menu__item"><a href="#section3">Удобства</a></li>
+                            <li class="menu__item"><a href="#section3">Единый аккаунт</a></li>
                             <li class="menu__item"><a href="#section4">Мультиканальность</a></li>
                             <li class="menu__item"><a href="#section5">Виды регистраций</a></li>
                             <li class="menu__item"><a href="#section6">Стимуляция</a></li>
                             <li class="menu__item"><a href="#section7">Партнерам</a></li>
-                            <li class="menu__item"><a href="#section8">Требования</a></li>
+                            <li class="menu__item"><a href="#section8">Подключение</a></li>
                             <li class="menu__item"><a href="#section9">Старт</a></li>
                         </ul>
                     </nav>
@@ -248,7 +248,7 @@
                     <div class="section__inner">
                        <div class="section__text section__text_center">
                             <h2 class="heading"><span>Стимуляция активности игроков</span></h2>
-                            <p>Единый аккаунт для всех каналов</p>
+                            <p>Повышение игровой активности и лояльности игроков</p>
                         </div>
                     </div>
                     <div class="jackpot">
@@ -424,7 +424,7 @@
                 <section class="section section_partners" id="section8">
                     <div class="section__inner section__inner_partners">
                        <div class="section__text">
-                            <h2 class="heading"><span>Партнерам</span></h2>
+                            <h2 class="heading"><span>Быстрый старт</span></h2>
                             <p>Максимально быстрое <br>начало работы</p>
                         </div>
                     </div>
@@ -468,21 +468,23 @@
                     <div class="footer">
                         <form action="#">
                             <div class="footer__input">
-                                <div class="footer__input_div-input">
+                                <div class="footer__input">
                                     <label for="name"></label>
-                                    <input name="name" id="name" class="footer__item" type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{3,20}" title="Поле 'Имя' должно состоять минимум из 3-х символов, латинского или кириллического алфавита." required>
+                                    <input name="name" id="name" class="footer__item" type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{3,20}" required>
+                                    <span class="footer__error">Поле 'Имя' должно состоять от 3-х до 15 букв</span>
                                 </div>
-                                <div class="footer__input_div-input">
+                                <div class="footer__input">
                                     <label for="tel"></label>
-                                    <input name="tel" id="tel" class="footer__item" type="tel" placeholder="Телефон" pattern="[0-9]{5,14}"
-                                    title="Поле 'Телефон' должно состоять от 5 до 14 цифр." required>
+                                    <input name="tel" id="tel" class="footer__item" type="tel" placeholder="Телефон" pattern="[0-9]{5,14}" required>
+                                    <span class="footer__error">Поле 'Телефон' должно состоять от 5 до 14 цифр</span>
                                 </div>
-                                <div class="footer__input footer__input_div-input">
+                                <div class="footer__input">
                                     <label for="email"></label>
                                     <input name="email" id="email" class="footer__item" type="email" placeholder="EMAIL" required>
+                                    <span class="footer__error">Адрес электронной почтый должен содержать символ "@"</span>
                                 </div>
                                 <div class="footer__button_div-button">
-                                    <input type="submit" class="button" name="send">
+                                    <input type="submit" class="button" name="send" value="Отправить">
                                 </div>
                             </div>
                         </form>
