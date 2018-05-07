@@ -61,7 +61,8 @@ $(document).ready(function() {
 	function myFunction() {
 		    if (x.matches) {
 		        $(".gallery").flipster({
-		        	spacing: -0.94,
+		        	// spacing: -0.94,
+		        	spacing: -1.1,
 		        	start: 0,
 		        })
 		    }
@@ -99,6 +100,7 @@ $(document).ready(function() {
 	y.addListener(myFunction)
 	z.addListener(myFunction)
 	t.addListener(myFunction)
+
 	if ("ontouchstart" in document.documentElement) {
 	document.documentElement.className += " touch";
 	}
@@ -110,5 +112,5 @@ $(document).ready(function() {
 	  jQuery('*').not(div).bind('click', function() {
 	    div.addClass('no-hover');
 	  });
-});
+	});
 });
