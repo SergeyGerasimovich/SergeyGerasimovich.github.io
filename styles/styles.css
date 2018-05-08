@@ -143,7 +143,7 @@ main {
 
 #app {
   height: 100vh; }
-  .menu-opened #app {
+  .body-opened #app {
     overflow: hidden; }
 
 .heading {
@@ -1524,7 +1524,8 @@ h2.heading {
     margin-right: 0; }
   .contacts {
     visibility: hidden;
-    transition: visibility 0s linear 1s; }
+    transition: visibility 0s linear 1s;
+    align-items: initial; }
     .contacts__feedback {
       display: none; }
   .icon {
@@ -1768,7 +1769,8 @@ h2.heading {
     margin-right: 0; }
   .contacts {
     visibility: hidden;
-    transition: visibility 0s linear 1s; }
+    transition: visibility 0s linear 1s;
+    align-items: initial; }
     .contacts__feedback {
       display: none; }
   .icon {
@@ -2038,7 +2040,8 @@ h2.heading {
     margin-right: 0; }
   .contacts {
     visibility: hidden;
-    transition: visibility 0s linear 1s; }
+    transition: visibility 0s linear 1s;
+    align-items: initial; }
     .contacts__feedback {
       display: none; }
   .icon {
@@ -2342,7 +2345,8 @@ h2.heading {
     margin-right: 0; }
   .contacts {
     visibility: hidden;
-    transition: visibility 0s linear 1s; }
+    transition: visibility 0s linear 1s;
+    align-items: initial; }
     .contacts__feedback {
       display: none; }
   .icon {
@@ -2489,4 +2493,4 @@ h2.heading {
   .footer__text p {
     font-size: 10px; } }
 
-/*# sourceMappingURL=styles/styles.css.map */
+/*# sourceMappingURL=styles.css.map */
