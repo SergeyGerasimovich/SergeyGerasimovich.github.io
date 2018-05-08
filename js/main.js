@@ -99,7 +99,7 @@ $(document).ready(function() {
 	y.addListener(myFunction)
 	z.addListener(myFunction)
 	t.addListener(myFunction)
-    $('.presentation__item').click(function() {
-    	$(this).toggleClass('presentation__item_active');
-    });
+    // $('.presentation__item').click(function() {
+    // 	$(this).toggleClass('');
+    // });
 });
