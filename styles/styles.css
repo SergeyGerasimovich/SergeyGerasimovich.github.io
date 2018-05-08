@@ -70,7 +70,7 @@
   font-style: normal;
   src: url("../fonts/LcdAttPhoneTimeDate.woff2") format("woff2"), url("../fonts/LcdAttPhoneTimeDate.woff") format("woff"); }
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -140,6 +140,11 @@ img {
 
 main {
   overflow: hidden; }
+
+#app {
+  height: 100vh; }
+  .menu-opened #app {
+    overflow: hidden; }
 
 .heading {
   font-family: 'PTSans', sans-serif;
@@ -1354,10 +1359,6 @@ h2.heading {
 @media (min-width: 992px) and (max-width: 1279px) {
   body {
     font-size: 28px; }
-  .body-opened {
-    overflow: hidden;
-    height: 100%;
-    width: 100%; }
   h1.heading {
     font-size: 60px; }
   h2.heading {
@@ -1600,10 +1601,6 @@ h2.heading {
 @media (min-width: 768px) and (max-width: 991px) {
   body {
     font-size: 24px; }
-  .body-opened {
-    overflow: hidden;
-    height: 100%;
-    width: 100%; }
   h1.heading {
     font-size: 52px; }
   h2.heading {
@@ -1868,10 +1865,6 @@ h2.heading {
 @media (max-width: 767px) {
   body {
     font-size: 20px; }
-  .body-opened {
-    overflow: hidden;
-    height: 100%;
-    width: 100%; }
   h1.heading {
     font-size: 40px; }
   h2.heading {
@@ -2171,10 +2164,6 @@ h2.heading {
 @media (max-width: 480px) {
   body {
     font-size: 18px; }
-  .body-opened {
-    overflow: hidden;
-    height: 100%;
-    width: 100%; }
   h1.heading {
     font-size: 34px; }
   h2.heading {
