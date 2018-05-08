@@ -2393,12 +2393,8 @@ h2.heading {
       font-size: 20px; }
     .presentation__item_pop-up p {
       font-size: 18px; }
-    .presentation__item-overlay_active {
-      opacity: 0.7; }
-    .presentation__item_pop-up_active {
-      top: 18.3%;
-      left: 7.4%;
-      opacity: 1; }
+    .presentation__item_active {
+      opacity: 0.1; }
   .register {
     justify-content: center;
     padding: 3.5em; }
