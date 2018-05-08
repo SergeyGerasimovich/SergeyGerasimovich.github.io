@@ -1071,10 +1071,11 @@ h2.heading {
       -webkit-transform: translate(0%, 0%);
       transform: translate(0%, 0%);
       transition: all 0.21s ease-in-out 0.13s; }
-    .presentation__item:hover .presentation__item_pop-up {
-      top: 18.3%;
-      left: 7.4%;
-      opacity: 1; }
+      .presentation__item_active .presentation__item_pop-up,
+      .hover .presentation__item:hover .presentation__item_pop-up {
+        top: 18.3%;
+        left: 7.4%;
+        opacity: 1; }
     .presentation__item-overlay {
       background: black;
       position: absolute;
@@ -1082,8 +1083,9 @@ h2.heading {
       width: 100%;
       opacity: 0;
       transition: all 0.2s ease-in-out 0s; }
-    .presentation__item:hover .presentation__item-overlay {
-      opacity: 0.7; }
+      .presentation__item_active .presentation__item-overlay,
+      .hover .presentation__item:hover .presentation__item-overlay {
+        opacity: 0.7; }
 
 .register {
   max-width: 1280px;
@@ -2160,14 +2162,6 @@ h2.heading {
     font-size: 11px; } }
 
 /* Landscape phones and smaller */
-@media (hover: hover) {
-  .presentation__item:hover .presentation__item_pop-up {
-    top: 18.3%;
-    left: 7.4%;
-    opacity: 1; }
-  .presentation__item:hover .presentation__item-overlay {
-    opacity: 0.7; } }
-
 @media (max-width: 480px) {
   body {
     font-size: 18px; }
@@ -2401,8 +2395,6 @@ h2.heading {
       font-size: 20px; }
     .presentation__item_pop-up p {
       font-size: 18px; }
-    .presentation__item_active {
-      opacity: 0.1; }
   .register {
     justify-content: center;
     padding: 3.5em; }

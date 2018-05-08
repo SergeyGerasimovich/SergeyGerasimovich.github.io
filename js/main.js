@@ -99,7 +99,16 @@ $(document).ready(function() {
 	y.addListener(myFunction)
 	z.addListener(myFunction)
 	t.addListener(myFunction)
-	$('.presentation__item').click(function() {
-		$(this).toggleClass('presentation__item_active');
-	});
+	function isTouchDevice() {
+		return 'ontouchstart' in window || navigator.maxTouchPoints;
+	};
+	if (!isTouchDevice()) {
+		$('body').addClass('hover');
+	} else {
+		$('body').addClass('no-hover');
+		$('.presentation__item').click(function() {
+			$(this).toggleClass('presentation__item_active');
+		});
+	}
+	
 });
