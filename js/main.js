@@ -99,7 +99,8 @@ $(document).ready(function() {
 	y.addListener(myFunction)
 	z.addListener(myFunction)
 	t.addListener(myFunction)
-    // $('.presentation__item').click(function() {
-    // 	$(this).toggleClass('');
-    // });
+	$('.presentation__item-overlay').click(function() {
+		$(this).toggleClass('presentation__item-overlay_active'),
+		$('.presentation__item_pop-up').toggleClass('presentation__item_pop-up_active');
+	});
 });
