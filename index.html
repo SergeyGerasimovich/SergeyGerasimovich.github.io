@@ -466,18 +466,18 @@
                         </div>
                     </div>
                     <div class="footer">
-                        <form action="#">
+                        <form novalidate action="#">
                             <div class="footer__input">
                                 <label for="name"></label>
-                                <input name="name" id="name" class="footer__item" type="text" placeholder="Имя" pattern="[A-Za-zА-Яа-яЁё]{3,20}">
+                                <input name="name" id="name" class="footer__item" type="text" placeholder="Имя" required>
                             </div>
                             <div class="footer__input">
                                 <label for="tel"></label>
-                                <input name="tel" id="tel" class="footer__item" type="tel" placeholder="Телефон" pattern="[0-9]{5,14}">
+                                <input name="tel" id="tel" class="footer__item" type="tel" placeholder="Телефон" required>
                             </div>
                             <div class="footer__input">
                                 <label for="email"></label>
-                                <input name="email" id="email" class="footer__item" type="email" placeholder="EMAIL">
+                                <input name="email" id="email" class="footer__item" type="email" placeholder="EMAIL" required>
                                 <span class="footer__error">Поле заполнено некорректно</span>
                             </div>
                             <div class="footer__button">

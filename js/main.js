@@ -109,6 +109,11 @@ $(document).ready(function() {
 		$('.presentation__item').click(function() {
 			$(this).toggleClass('presentation__item_active');
 		});
-	}
-	
+	};
+	$('form').on('submit', function(e){
+	  if( ! this.checkValidity()){
+	  	e.preventDefault();
+	    $(this).addClass('invalid');
+	  }
+	});
 });

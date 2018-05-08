@@ -1295,11 +1295,11 @@ h2.heading {
   border: none;
   border-bottom: 0.5px solid #fff;
   border-radius: 1px; }
-  .footer__item:valid:not(:placeholder-shown) {
+  .invalid .footer__item:valid:not(:placeholder-shown) {
     border-bottom: 1px solid green; }
-  .footer__item:invalid:not(:placeholder-shown) {
+  .invalid .footer__item:invalid:not(:placeholder-shown) {
     border-bottom: 1px solid red; }
-  .footer__item:invalid:not(:placeholder-shown) + .footer__error {
+  .invalid .footer__item:invalid:not(:placeholder-shown) + .footer__error {
     display: block; }
 
 .footer :focus::-webkit-input-placeholder {
