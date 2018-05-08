@@ -2393,6 +2393,8 @@ h2.heading {
       font-size: 20px; }
     .presentation__item_pop-up p {
       font-size: 18px; }
+    .presentation__item_active {
+      opacity: 0.3; }
   .register {
     justify-content: center;
     padding: 3.5em; }
