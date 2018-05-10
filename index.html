@@ -466,22 +466,22 @@
                         </div>
                     </div>
                     <div class="footer">
-                        <form novalidate action="#">
-                            <div class="footer__input">
+                        <form novalidate action="#" class="footer__form">
+                            <div class="footer__form_item">
                                 <label for="name"></label>
-                                <input name="name" id="name" class="footer__item" type="text" placeholder="Имя" required>
+                                <input name="name" id="name" class="footer__form_input" type="text" placeholder="Имя" required>
                             </div>
-                            <div class="footer__input">
+                            <div class="footer__form_item">
                                 <label for="tel"></label>
-                                <input name="tel" id="tel" class="footer__item" type="tel" placeholder="Телефон" required>
+                                <input name="tel" id="tel" class="footer__form_input" type="tel" placeholder="Телефон" required>
                             </div>
-                            <div class="footer__input">
+                            <div class="footer__form_item">
                                 <label for="email"></label>
-                                <input name="email" id="email" class="footer__item" type="email" placeholder="EMAIL" required>
-                                <span class="footer__error">Поле заполнено некорректно</span>
+                                <input name="email" id="email" class="footer__form_input email" type="email" placeholder="EMAIL" required>
+                                <span class="footer__form_error"></span>
                             </div>
-                            <div class="footer__button">
-                                <input type="submit" class="button" name="send" value="Отправить">
+                            <div class="footer__form_item">
+                                <input type="submit" class="footer__form_button button" name="send" onclick="frmotpr();" value="Отправить">
                             </div>
                         </form>
                         <div class="footer__text">

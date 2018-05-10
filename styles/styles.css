@@ -1284,12 +1284,12 @@ h2.heading {
       top: 8%;
       right: 26.8%; }
 
-.footer__input {
+.footer__form_item {
   max-width: 12em;
   margin: 0 auto;
   padding: 1em 0 0 0; }
 
-.footer__item {
+.footer__form_input {
   position: relative;
   background: transparent;
   width: 100%;
@@ -1300,12 +1300,17 @@ h2.heading {
   border: none;
   border-bottom: 0.5px solid #fff;
   border-radius: 1px; }
-  .invalid .footer__item:valid:not(:placeholder-shown) {
-    border-bottom: 1px solid green; }
-  .invalid .footer__item:invalid:not(:placeholder-shown) {
-    border-bottom: 1px solid red; }
-  .invalid .footer__item:invalid:not(:placeholder-shown) + .footer__error {
-    display: block; }
+
+.footer__form_error {
+  display: none;
+  color: red;
+  text-align: left;
+  font-size: 12px;
+  position: relative;
+  bottom: -3px; }
+
+.footer__form_button {
+  margin: 2.46em 0 9.33em 0; }
 
 .footer :focus::-webkit-input-placeholder {
   color: transparent; }
@@ -1335,25 +1340,17 @@ h2.heading {
   color: white;
   text-transform: uppercase; }
 
-.footer__button {
-  padding: 1.36em 0 4.24em 0; }
-
-.footer__error {
-  display: none;
-  color: red;
-  text-align: left;
-  font-size: 12px;
-  position: relative;
-  bottom: -3px; }
-
 .footer__text {
   max-width: 1045px;
   margin: 0 auto;
-  padding: 0 0.9em 3.09em 0.9em; }
+  padding: 0 0.9em 2.2em 0.9em; }
   .footer__text p {
     font-size: 12px;
     font-weight: 300;
     color: rgba(95, 95, 95, 0.8); }
+
+.notvalid {
+  border-color: red; }
 
 /* Portrait tablets and medium desktops */
 @media (min-width: 992px) and (max-width: 1279px) {

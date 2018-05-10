@@ -1,6 +1,7 @@
 'use strict';
 
 $(document).ready(function() {
+	//Background of a button in the header
 	$(window).scroll(function(){
     if ($(window).scrollTop() > 450) {
         $('.contacts__feedback').addClass('contacts__feedback_scroll');
@@ -9,6 +10,8 @@ $(document).ready(function() {
         $('.contacts__feedback').removeClass('contacts__feedback_scroll')
     }
 	});
+	//Background of a button in the header END
+	//Burger menu && tracing scroll navigation
 	var burger = document.querySelector('.header__burger-container'),
 	    header = document.querySelector('.header'),
 	    body = document.querySelector("body");
@@ -53,6 +56,8 @@ $(document).ready(function() {
 		    return false;
 	  	});
 	}
+	//Burger menu && tracing scroll navigation END
+	//Settings carousel
 	scrollNav();
 	$(".gallery").flipster({
 		style: 'coverflow',
@@ -103,6 +108,8 @@ $(document).ready(function() {
 	y.addListener(myFunction)
 	z.addListener(myFunction)
 	t.addListener(myFunction)
+	//Settings carousel END
+	//Hover class="presentation"
 	function isTouchDevice() {
 		return 'ontouchstart' in window || navigator.maxTouchPoints;
 	};
@@ -114,10 +121,55 @@ $(document).ready(function() {
 			$(this).toggleClass('presentation__item_active');
 		});
 	};
+	//Hover class="presentation" END
+	//Form validation
 	$('form').on('submit', function(e){
 	  if( ! this.checkValidity()){
 	  	e.preventDefault();
 	    $(this).addClass('invalid');
 	  }
 	});
+	//Form validation END
+	function frmotpr(){
+        var field = new Array("email");
+        $(".footer__form").submit(function() {
+            var error=0;
+            $(".footer__form").find(":input").each(function() {
+                for(var i=0;i<field.length;i++){
+                    if($(this).attr("name")==field[i]){
+                        if(!$(this).val()){
+                            $(this).addClass('notvalid');
+                            error=1;
+                        }
+                        else{
+                            $(this).removeClass('notvalid');
+                        }
+                    }
+                }
+           })
+            var email = $("#email").val();
+            if(!isValidEmailAddress(email)){
+                error=1;
+                $("#email").addClass('notvalid');
+            }
+            if(error==0){
+            	$(".footer__form_error").css("display","none");
+            	$("#email").css("border-color","green");
+            	return true;
+            }else{
+            var err_text = "";
+            if(error==1)  err_text="Поле заполнено некорректно";
+            $(".footer__form_error").html(err_text);
+            $(".footer__form_error").fadeIn("slow").css("display","block");
+            $("#email").css("border-color","red");
+            return false;
+            }
+        })
+    };
+    function isValidEmailAddress(emailAddress) {
+        var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+        return pattern.test(emailAddress);
+    }
+    var inputForm = document.querySelector('.footer__form_button');
+    inputForm.onclick = frmotpr();
 });
