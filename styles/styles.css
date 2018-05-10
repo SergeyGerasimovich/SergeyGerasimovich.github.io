@@ -1533,32 +1533,11 @@ h2.heading {
     height: 50px; }
   .button {
     font-size: 14px; }
-  #coverflow {
-    margin-top: -5em; }
-  .flipster {
-    overflow-y: hidden;
-    overflow-x: hidden; }
-  .flipster__button {
-    color: white;
-    opacity: 0.8; }
-  .flipster--coverflow .flipster__item__content {
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%; }
-  .flipster--carousel .flipster__item--current .flipster__item__content {
-    -webkit-transform: translateX(0) rotateY(0deg) scale(0.6);
-    transform: translateX(0) rotateY(0deg) scale(0.6); }
-  .flipster--coverflow .flipster__item--future .flipster__item__content {
-    -webkit-transform-origin: 60% 50%;
-    transform-origin: 60% 50%;
-    -webkit-transform: scale(0.35) rotateY(-50deg);
-    transform: scale(0.35) rotateY(-50deg); }
-  .flipster--coverflow .flipster__item--past .flipster__item__content {
-    -webkit-transform-origin: 40% 50%;
-    transform-origin: 40% 50%;
-    -webkit-transform: scale(0.35) rotateY(50deg);
-    transform: scale(0.35) rotateY(50deg); }
-  ul.flip-items.flipster__container {
-    height: 500px !important; }
+  .gallery__text {
+    font-size: 22px; }
+  img.gallery__img {
+    width: 550px;
+    height: 380px; }
   .suppliers {
     padding: 0.3em; }
   .account {
@@ -1778,32 +1757,11 @@ h2.heading {
     height: 45px; }
   .button {
     font-size: 13px; }
-  #coverflow {
-    margin-top: -4em; }
-  .flipster {
-    overflow-y: hidden;
-    overflow-x: hidden; }
-  .flipster__button {
-    color: white;
-    opacity: 0.8; }
-  .flipster--coverflow .flipster__item__content {
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%; }
-  .flipster--carousel .flipster__item--current .flipster__item__content {
-    -webkit-transform: translateX(0) rotateY(0deg) scale(0.6);
-    transform: translateX(0) rotateY(0deg) scale(0.6); }
-  .flipster--coverflow .flipster__item--future .flipster__item__content {
-    -webkit-transform-origin: 60% 50%;
-    transform-origin: 60% 50%;
-    -webkit-transform: scale(0.35) rotateY(-50deg);
-    transform: scale(0.35) rotateY(-50deg); }
-  .flipster--coverflow .flipster__item--past .flipster__item__content {
-    -webkit-transform-origin: 40% 50%;
-    transform-origin: 40% 50%;
-    -webkit-transform: scale(0.35) rotateY(50deg);
-    transform: scale(0.35) rotateY(50deg); }
-  ul.flip-items.flipster__container {
-    height: 500px !important; }
+  .gallery__text {
+    font-size: 18px; }
+  img.gallery__img {
+    width: 470px;
+    height: 330px; }
   .suppliers {
     padding: 0.3em; }
   .account {
@@ -2049,31 +2007,11 @@ h2.heading {
     height: 45px; }
   .button {
     font-size: 12px; }
-  #coverflow {
-    margin-top: -5em; }
-  .flipster {
-    overflow-y: hidden;
-    overflow-x: hidden; }
-  .flipster--coverflow .flipster__item__content {
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%; }
-  .flipster--carousel .flipster__item--current .flipster__item__content {
-    -webkit-transform: translateX(0) rotateY(0deg) scale(0.5);
-    transform: translateX(0) rotateY(0deg) scale(0.5); }
-  .flipster--coverflow .flipster__item--future .flipster__item__content {
-    -webkit-transform-origin: 60% 50%;
-    transform-origin: 60% 50%;
-    -webkit-transform: scale(0.32) rotateY(-50deg);
-    transform: scale(0.32) rotateY(-50deg); }
-  .flipster--coverflow .flipster__item--past .flipster__item__content {
-    -webkit-transform-origin: 40% 50%;
-    transform-origin: 40% 50%;
-    -webkit-transform: scale(0.32) rotateY(50deg);
-    transform: scale(0.32) rotateY(50deg); }
-  ul.flip-items.flipster__container {
-    height: 500px !important; }
-  .flipster--coverflow .flipster__container, .flipster--coverflow .flipster__item, .flipster--coverflow .flipster__item__content {
-    transition: all 140ms ease-in-out; }
+  .gallery__text {
+    font-size: 18px; }
+  img.gallery__img {
+    width: 300px;
+    height: 235px; }
   .suppliers {
     grid-template-columns: auto auto;
     grid-template-rows: 6.54em 6.54em 6.54em 6.54em;
@@ -2354,31 +2292,12 @@ h2.heading {
     height: 40px; }
   .button {
     font-size: 13px; }
-  #coverflow {
-    margin-top: -8em; }
-  .flipster {
-    overflow-y: hidden;
-    overflow-x: hidden; }
-  .flipster--coverflow .flipster__item__content {
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%; }
-  .flipster--carousel .flipster__item--current .flipster__item__content {
-    -webkit-transform: translateX(0) rotateY(0deg) scale(0.37);
-    transform: translateX(0) rotateY(0deg) scale(0.37); }
-  .flipster--coverflow .flipster__item--future .flipster__item__content {
-    -webkit-transform-origin: 60% 50%;
-    transform-origin: 60% 50%;
-    -webkit-transform: scale(0.28) rotateY(-35deg);
-    transform: scale(0.28) rotateY(-35deg); }
-  .flipster--coverflow .flipster__item--past .flipster__item__content {
-    -webkit-transform-origin: 40% 50%;
-    transform-origin: 40% 50%;
-    -webkit-transform: scale(0.28) rotateY(35deg);
-    transform: scale(0.28) rotateY(35deg); }
-  ul.flip-items.flipster__container {
-    height: 430px !important; }
-  .flipster--coverflow .flipster__container, .flipster--coverflow .flipster__item, .flipster--coverflow .flipster__item__content {
-    transition: all 100ms ease-in-out; }
+  .gallery__text {
+    font-size: 16px;
+    padding-top: 2em; }
+  img.gallery__img {
+    width: 285px;
+    height: 230px; }
   .suppliers {
     grid-template-columns: auto auto;
     grid-template-rows: 6.54em 6.54em 6.54em 6.54em;

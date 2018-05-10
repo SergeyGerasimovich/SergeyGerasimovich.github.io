@@ -37,11 +37,11 @@ $(document).ready(function() {
 	       menuItems
 	         .parent().removeClass("active")
 	         .end().filter("[href='#"+id+"']").parent().addClass("active");
-	   }                   
+	   }
 	});
 	function scrollNav() {
-  		$('a').click(function(){  
-		    $(".active").removeClass("active");      
+  		$('a').click(function(){
+		    $(".active").removeClass("active");
 		    $(this).closest('li').addClass("active");
 		    $(".header").removeClass("menu-opened");
 		    $("body").removeClass("body-opened");
@@ -55,32 +55,36 @@ $(document).ready(function() {
 	}
 	scrollNav();
 	$(".gallery").flipster({
-		style: 'carousel',
+		style: 'coverflow',
 	    start: 0
 	});
 	function myFunction() {
 		    if (x.matches) {
 		        $(".gallery").flipster({
-		        	spacing: -0.94,
+		        	spacing: -0.77,
 		        	start: 0,
+		        	click: false,
 		        })
 		    }
 		    else if (y.matches) {
 		    	$(".gallery").flipster({
-		    		spacing: -0.92,
+		    		spacing: -0.7,
 		    		start: 0,
+		    		click: false,
 		    	})
 		    }
 		    else if (z.matches) {
 		    	$(".gallery").flipster({
-		    		spacing: -0.87,
+		    		spacing: -0.83,
 		    		start: 0,
+		    		click: false,
 		    	})
 		    }
 		    else if (t.matches) {
 		    	$(".gallery").flipster({
-		    		spacing: -0.85,
+		    		spacing: -0.8,
 		    		start: 0,
+		    		click: false,
 		    	})
 		    }
 		    else {

@@ -65,7 +65,7 @@
             // [string|object]
             // Selector for children of `itemContainer` to flip
 
-            start: 'center',
+            start: 0,
             // ['center'|number]
             // Zero based index of the starting item, or use 'center' to start in the middle
 
@@ -90,7 +90,7 @@
             // Adds a class (e.g. flipster--coverflow) to the flipster element to switch between display styles
             // Create your own theme in CSS and use this setting to have Flipster add the custom class
 
-            spacing: -0.6,
+            spacing: 0,
             // [number]
             // Space between items relative to each item's width. 0 for no spacing, negative values to overlap
 
@@ -391,7 +391,7 @@
                     {
                         newClass += classes.itemFuture + ' ' +
                             classes.itemFuture + '-' + (i - _currentIndex);
-                        
+
                         zIndex = total -  (i - _currentIndex);
                     }
 
