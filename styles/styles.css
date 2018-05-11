@@ -1565,10 +1565,12 @@ h2.heading {
     width: 6.2em; }
   .jackpot-wb__num-box {
     font-size: 66px; }
-  .conditions__item {
-    padding: 1em 1em; }
-    .conditions__item p {
-      font-size: 15px; }
+  .conditions {
+    padding: 0 0.7vw 0.8vh 0.7vw; }
+    .conditions__item {
+      padding: 1em 1em; }
+      .conditions__item p {
+        font-size: 15px; }
   .partners {
     bottom: 9vw;
     right: 10vw; }
@@ -1795,10 +1797,12 @@ h2.heading {
     width: 6.5em; }
   .jackpot-wb__num-box {
     font-size: 64px; }
-  .conditions__item {
-    padding: 1em 0.6em; }
-    .conditions__item p {
-      font-size: 14px; }
+  .conditions {
+    padding: 0 0.7vw 0.8vh 0.7vw; }
+    .conditions__item {
+      padding: 1em 0.6em; }
+      .conditions__item p {
+        font-size: 14px; }
   .partners {
     bottom: 9vw;
     right: 6vw; }
@@ -1840,8 +1844,12 @@ h2.heading {
     text-align: center; }
     .section__text_center br {
       display: none; }
+  .section__text_partners {
+    padding-top: 1em; }
   .section__inner {
     padding: 3.93em 1.2em 1.81em 1.2em; }
+    .section__inner_partners {
+      padding: 5.43em 1.2em 1.81em 1.2em; }
   .header {
     display: flex;
     align-items: center;
@@ -2065,7 +2073,8 @@ h2.heading {
   .conditions {
     grid-template-columns: auto auto;
     grid-template-rows: auto;
-    grid-gap: 0.8vh 1vw; }
+    grid-gap: 0.8vh 1vw;
+    padding: 0 0.7vw 0.8vh 0.7vw; }
     .conditions__item {
       padding: 1em 0.3em; }
       .conditions__item:nth-child(1) {
@@ -2123,10 +2132,14 @@ h2.heading {
     background-size: 180% 100%; }
   .section__inner {
     padding: 3.93em 1.2em 1.81em 1.2em; }
+    .section__inner_partners {
+      padding: 6.43em 1.2em 1.81em 1.2em; }
   .section_partners {
     overflow: hidden; }
   .section_advantages {
     background: radial-gradient(58% 28% at bottom, rgba(66, 101, 158, 0.67) 34%, #121313 90%); }
+  .section__text_partners {
+    padding-top: 1.5em; }
   .header {
     display: flex;
     align-items: center;
@@ -2364,7 +2377,8 @@ h2.heading {
   .conditions {
     grid-template-columns: auto auto;
     grid-template-rows: auto;
-    grid-gap: 0.8vh 1vw; }
+    grid-gap: 0.8vh 1vw;
+    padding: 0 0.7vw 0.8vh 0.7vw; }
     .conditions__item {
       padding: 1em 0.3em; }
       .conditions__item:nth-child(1) {

@@ -122,7 +122,6 @@ $(document).ready(function() {
 			$(this).toggleClass('presentation__item_active');
 		});
 	};
-
 	//Hover class="presentation" END
 	//Form validation
 	$('form').on('submit', function(e){
@@ -173,4 +172,22 @@ $(document).ready(function() {
     var inputForm = document.querySelector('.footer__form_button');
     inputForm.onclick = frmotpr();
     //Form validation END
+    $('#send').click(function(){
+        var form_name   = $('#name').val();
+        var form_email   = $('#tel').val();
+        var form_message = $('#email').val();
+        $.ajax({
+            url: "post.php",
+            type: "post",
+            dataType: "json",
+            data: {
+                "name":   name,
+                "tel":   tel,
+                "email": email
+            },
+            success: function(data){
+                $('.messages').html(data.result);
+            }
+        });
+    });
 });
