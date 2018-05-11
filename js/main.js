@@ -131,7 +131,7 @@ $(document).ready(function() {
 	});
 	//Form validation END
 	function frmotpr(){
-        var field = new Array("email");
+        var field = new Array("name","tel","email");
         $(".footer__form").submit(function() {
             var error=0;
             $(".footer__form").find(":input").each(function() {
