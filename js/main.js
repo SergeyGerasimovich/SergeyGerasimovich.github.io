@@ -118,18 +118,19 @@ $(document).ready(function() {
 	} else {
 		$('body').addClass('no-hover');
 		$('.presentation__item').click(function() {
+			$('.presentation__item_active').not(this).removeClass('presentation__item_active');
 			$(this).toggleClass('presentation__item_active');
 		});
 	};
+
 	//Hover class="presentation" END
 	//Form validation
 	$('form').on('submit', function(e){
-	  if( ! this.checkValidity()){
+	  if(! this.checkValidity()){
 	  	e.preventDefault();
 	    $(this).addClass('invalid');
 	  }
 	});
-	//Form validation END
 	function frmotpr(){
         var field = new Array("name","tel","email");
         $(".footer__form").submit(function() {
@@ -171,4 +172,5 @@ $(document).ready(function() {
     }
     var inputForm = document.querySelector('.footer__form_button');
     inputForm.onclick = frmotpr();
+    //Form validation END
 });
