@@ -1300,8 +1300,10 @@ h2.heading {
   border: none;
   border-bottom: 0.5px solid #fff;
   border-radius: 1px; }
-  .footer__form_input:valid:not(:placeholder-shown) {
+  .footer__form_input_bc:valid:not(:placeholder-shown) {
     border-color: green; }
+  .footer__form_input:invalid:not(:placeholder-shown) {
+    border-color: red; }
 
 .footer__form_error {
   display: none;

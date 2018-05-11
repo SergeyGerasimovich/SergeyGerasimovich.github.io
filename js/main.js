@@ -143,6 +143,7 @@ $(document).ready(function() {
                         }
                         else{
                             $(this).removeClass('notvalid');
+                            error=0;
                         }
                     }
                 }
@@ -151,17 +152,15 @@ $(document).ready(function() {
             if(!isValidEmailAddress(email)){
                 error=1;
                 $("#email").addClass('notvalid');
-            }
-            if(error==0){
-            	$(".footer__form_error").css("display","none");
+            }if(error==0){
             	$("#email").css("border-color","green");
+            	$(".footer__form_error").css("display","none");
             	return true;
             }else{
             var err_text = "";
             if(error==1)  err_text="Поле заполнено некорректно";
             $(".footer__form_error").html(err_text);
-            $(".footer__form_error").fadeIn("slow").css("display","block");
-            $("#email").css("border-color","red");
+            $(".footer__form_error").css("display","block");
             return false;
             }
         })
