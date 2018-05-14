@@ -172,4 +172,29 @@ $(document).ready(function() {
     var inputForm = document.querySelector('.footer__form_button');
     inputForm.onclick = frmotpr();
     //Form validation END
+    $('#form').submit(function() {
+		if (document.form.name.value == '' || document.form.tel.value == '' || document.form.email.value == '') {
+			valid = false;
+			return valid;
+		}
+		$.ajax({
+			type: "POST",
+			url: "../php/mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			$('.js-overlay-thank-you').fadeIn();
+			$(this).find('input').val('');
+			$('#form').trigger('reset');
+		});
+		return false;
+	});
+	$('.js-close-thank-you').click(function() { // по клику на крестик
+		$('.js-overlay-thank-you').fadeOut();
+	});
+	$(document).mouseup(function (e) { // по клику вне попапа
+	    var popup = $('.popup');
+	    if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+	        $('.js-overlay-thank-you').fadeOut();
+	    }
+	});
 });
