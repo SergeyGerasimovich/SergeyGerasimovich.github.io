@@ -13,49 +13,48 @@ $(document).ready(function() {
 	//Background of a button in the header END
 	//Burger menu && tracing scroll navigation
 	var burger = document.querySelector('.header__burger-container'),
-	    header = document.querySelector('.header'),
-	    body = document.querySelector("body");
-	burger.onclick = function() {
-	    header.classList.toggle('menu-opened'),
-	    body.classList.toggle("body-opened");
-	  }
-	var lastId,
-		menu = $(".menu"),
-	    menuHeight = menu.outerHeight()+15,
-	    menuItems = menu.find("a"),
-	    scrollItems = menuItems.map(function(){
-	      var item = $($(this).attr("href"));
-	      if (item.length) { return item; }
-	    });
-	$(window).scroll(function(){
-	   var fromTop = $(this).scrollTop()+menuHeight;
-	   var cur = scrollItems.map(function(){
-	     if ($(this).offset().top < fromTop)
-	       return this;
-	   });
-	   cur = cur[cur.length-1];
-	   var id = cur && cur.length ? cur[0].id : "";
-	   if (lastId !== id) {
-	       lastId = id;
-	       menuItems
-	         .parent().removeClass("active")
-	         .end().filter("[href='#"+id+"']").parent().addClass("active");
-	   }
-	});
-	function scrollNav() {
-  		$('a').click(function(){
-		    $(".active").removeClass("active");
-		    $(this).closest('li').addClass("active");
-		    $(".header").removeClass("menu-opened");
-		    $("body").removeClass("body-opened");
-		    var theClass = $(this).attr("class");
-		    $('.'+theClass).parent('li').addClass('active');
-		    $('html, body').stop().animate({
-		        scrollTop: $( $(this).attr('href') ).offset().top - 0
-		    }, 370);
-		    return false;
-	  	});
-	}
+        header = document.querySelector('.header'),
+        body = document.querySelector("body");
+    burger.onclick = function() {
+        header.classList.toggle('menu-opened'),
+        body.classList.toggle("no-scroll");
+      }
+    var lastId,
+        menu = $(".menu"),
+        menuHeight = menu.outerHeight()+15,
+        menuItems = $('.menu__link'),
+        scrollItems = menuItems.map(function(){
+          var item = $($(this).attr("href"));
+          if (item.length) { return item; }
+        });
+    $(window).scroll(function(){
+       var fromTop = $(this).scrollTop()+menuHeight;
+       var cur = scrollItems.map(function(){
+         if ($(this).offset().top < fromTop)
+           return this;
+       });
+       cur = cur[cur.length-1];
+       var id = cur && cur.length ? cur[0].id : "";
+       if (lastId !== id) {
+           lastId = id;
+           menuItems
+             .parent().removeClass("menu__item_active")
+             .end().filter("[href='#"+id+"']").parent().addClass("menu__item_active");
+       }
+    });
+    function scrollNav() {
+        $('.menu__link').click(function(){
+            $(".menu__item_active").removeClass("menu__item_active");
+            $(this).closest('li').addClass("menu__item_active");
+            $(".header").removeClass("menu-opened");
+            $("body").removeClass("no-scroll");
+            var theClass = $(this).attr("class");
+            $('html, body').stop().animate({
+                scrollTop: $( $(this).attr('href') ).offset().top - 0
+            }, 370);
+            return false;
+        });
+    }
 	//Burger menu && tracing scroll navigation END
 	//Settings carousel
 	scrollNav();
@@ -125,7 +124,7 @@ $(document).ready(function() {
 	//Hover class="presentation" END
 	//Form validation
     $(function(x,y,z,w) {
-        $('input').on('blur', function() {
+        $('.form__item_input').on('blur', function() {
             var lnEl = $(this).val().length;
             var fldTxt =
         $(this).prev().text();
@@ -217,4 +216,23 @@ $(document).ready(function() {
         });
     });
     //Form validation END
+    //Message about the successful sending of data
+    $('.form__item_button').click(function() {
+        $('.js-overlay-thank-you').fadeIn();
+        $(this).find('input').val('');
+        $('.form').trigger('reset');
+        setTimeout(function(){
+            $('.js-overlay-thank-you').fadeOut();
+        }, 2700);
+    });
+    $('.js-close-thank-you').click(function() {
+        $('.js-overlay-thank-you').fadeOut();
+    });
+    $(document).mouseup(function (e) {
+        var popup = $('.popup');
+        if (e.target!=popup[0]&&popup.has(e.target).length === 0){
+            $('.js-overlay-thank-you').fadeOut();
+        }
+    });
+    //Message about the successful sending of data END
 });
