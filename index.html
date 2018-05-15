@@ -24,15 +24,15 @@
                 <div class="header__icon"></div>
                     <nav class="nav">
                         <ul class="menu">
-                            <li class="menu__item"><a href="#section1">Продукт</a></li>
-                            <li class="menu__item"><a href="#section2">Поставщики игр</a></li>
-                            <li class="menu__item"><a href="#section3">Единый аккаунт</a></li>
-                            <li class="menu__item"><a href="#section4">Мультиканальность</a></li>
-                            <li class="menu__item"><a href="#section5">Виды регистраций</a></li>
-                            <li class="menu__item"><a href="#section6">Стимуляция</a></li>
-                            <li class="menu__item"><a href="#section7">Партнерам</a></li>
-                            <li class="menu__item"><a href="#section8">Подключение</a></li>
-                            <li class="menu__item"><a href="#section9">Старт</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#section1">Продукт</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#section2">Поставщики игр</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#section3">Единый аккаунт</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#section4">Мультиканальность</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#section5">Виды регистраций</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#section6">Стимуляция</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#section7">Партнерам</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#section8">Подключение</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#section9">Старт</a></li>
                         </ul>
                     </nav>
                 <div class="header__logo">
@@ -466,28 +466,24 @@
                         </div>
                     </div>
                     <div class="footer">
-                        <form novalidate id="form" name="form" class="form footer__form">
-                            <div class="footer__form_item">
+                        <form novalidate name="form" class="form footer__form">
+                            <div class="form__item">
                                 <label for="name"></label>
-                                <input name="name" id="name" class="footer__form_input footer__form_input_bc" type="text" placeholder="Имя" autocomplete="off" required>
+                                <input name="name" class="form__item_input" type="text" placeholder="Имя" autocomplete="off" required>
+                                <span class="form__item_error"></span>
                             </div>
-                            <div class="footer__form_item">
+                            <div class="form__item">
                                 <label for="tel"></label>
-                                <input name="tel" id="tel" class="footer__form_input footer__form_input_bc" type="tel" placeholder="Телефон" autocomplete="off" required>
+                                <input name="tel" class="form__item_input" type="tel" placeholder="Телефон" autocomplete="off" required>
+                                <span class="form__item_error"></span>
                             </div>
-                            <div class="footer__form_item">
+                            <div class="form__item">
                                 <label for="email"></label>
-                                <input name="email" id="email" class="footer__form_input email" type="email" placeholder="EMAIL" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" autocomplete="off" required>
-                                <span class="footer__form_error"></span>
+                                <input name="email" class="form__item_input" type="email" placeholder="EMAIL" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" autocomplete="off" required>
+                                <span class="form__item_error"></span>
                             </div>
-                            <div class="footer__form_item">
-                                <input type="submit" id="send" class="footer__form_button button" name="send" value="Отправить">
-                            </div>
-                            <div class="overlay js-overlay-thank-you">
-                                <div class="popup js-thank-you">
-                                    <span>Ваша заявка отправлена</span>
-                                    <div class="close-popup js-close-thank-you"></div>
-                                </div>
+                            <div class="form__item">
+                                <input type="submit" id="send" class="form__item_button button" name="send" value="Отправить">
                             </div>
                         </form>
                         <div class="footer__text">
@@ -496,6 +492,12 @@
                     </div>
                 </section>
             </footer>
+            <div class="overlay js-overlay-thank-you">
+                <div class="popup js-thank-you">
+                    <span>Ваша заявка отправлена</span>
+                    <div class="close-popup js-close-thank-you"></div>
+                </div>
+            </div>
             <script>var coverflow = $("#coverflow").flipster();</script>
         </div>
     </body>

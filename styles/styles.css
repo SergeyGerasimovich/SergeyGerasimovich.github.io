@@ -1284,7 +1284,7 @@ h2.heading {
       top: 8%;
       right: 26.8%; }
 
-.footer .overlay {
+.overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1293,7 +1293,7 @@ h2.heading {
   background-color: rgba(0, 0, 0, 0.6);
   display: none; }
 
-.footer .popup {
+.popup {
   position: absolute;
   width: 20vw;
   height: 9vh;
@@ -1305,11 +1305,11 @@ h2.heading {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   background-color: #262727; }
-  .footer .popup span {
+  .popup span {
     font-size: 24px;
     color: white; }
 
-.footer .close-popup {
+.close-popup {
   position: absolute;
   top: 15px;
   right: 15px;
@@ -1317,7 +1317,7 @@ h2.heading {
   height: 23px;
   cursor: pointer; }
 
-.footer .close-popup:before {
+.close-popup:before {
   content: '';
   background-color: #000;
   position: absolute;
@@ -1328,10 +1328,10 @@ h2.heading {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
-.footer .close-popup:hover:before {
+.close-popup:hover:before {
   background-color: #fff; }
 
-.footer .close-popup:after {
+.close-popup:after {
   content: '';
   background-color: #000;
   position: absolute;
@@ -1342,40 +1342,8 @@ h2.heading {
   transform: rotate(45deg);
   left: -4px; }
 
-.footer .close-popup:hover:after {
+.close-popup:hover:after {
   background-color: #fff; }
-
-.footer__form_item {
-  max-width: 12em;
-  margin: 0 auto;
-  padding: 1em 0 0 0; }
-
-.footer__form_input {
-  position: relative;
-  background: transparent;
-  width: 100%;
-  outline: none;
-  padding: 0 0 0.8em 0.1em;
-  font-size: 16px;
-  color: white;
-  border: none;
-  border-bottom: 0.5px solid #fff;
-  border-radius: 1px; }
-  .footer__form_input_bc:valid:not(:placeholder-shown) {
-    border-color: green; }
-  .footer__form_input:invalid:not(:placeholder-shown) {
-    border-color: red; }
-
-.footer__form_error {
-  display: none;
-  color: red;
-  text-align: left;
-  font-size: 12px;
-  position: relative;
-  bottom: -3px; }
-
-.footer__form_button {
-  margin: 2.46em 0 9.33em 0; }
 
 .footer :focus::-webkit-input-placeholder {
   color: transparent; }
@@ -1408,11 +1376,36 @@ h2.heading {
 .footer__text {
   max-width: 1045px;
   margin: 0 auto;
-  padding: 0 0.9em 2.2em 0.9em; }
+  padding: 0 0.9em 2em 0.9em; }
   .footer__text p {
     font-size: 12px;
     font-weight: 300;
     color: rgba(95, 95, 95, 0.8); }
+
+.form__item {
+  max-width: 12em;
+  margin: 0 auto;
+  padding: 1em 0 0 0; }
+  .form__item_error {
+    display: block;
+    color: red;
+    text-align: left;
+    font-size: 12px;
+    position: relative;
+    bottom: -3px; }
+  .form__item_input {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    outline: none;
+    padding: 0 0 0.8em 0.1em;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-bottom: 0.5px solid #fff;
+    border-radius: 1px; }
+  .form__item_button {
+    margin: 2.46em 0 9.33em 0; }
 
 .notvalid {
   border-color: red; }
