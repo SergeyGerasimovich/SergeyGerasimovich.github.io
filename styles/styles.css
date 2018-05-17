@@ -1453,8 +1453,10 @@ h2.heading {
     max-width: 33%; }
     .presentation__item_info h5 {
       font-size: 15px; }
-    .presentation__item_pop-up p {
-      font-size: 15px; }
+    .presentation__item_pop-up {
+      width: 90%; }
+      .presentation__item_pop-up p {
+        font-size: 15px; }
   .register__item:nth-child(2) {
     left: 1.9%; }
   .register__item:before {
@@ -1749,8 +1751,10 @@ h2.heading {
     max-width: 100%; }
     .presentation__item_info h5 {
       font-size: 20px; }
-    .presentation__item_pop-up p {
-      font-size: 18px; }
+    .presentation__item_pop-up {
+      width: 90%; }
+      .presentation__item_pop-up p {
+        font-size: 18px; }
   .register {
     justify-content: center;
     padding: 3.5em; }
