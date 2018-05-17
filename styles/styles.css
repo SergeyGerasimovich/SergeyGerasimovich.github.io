@@ -466,8 +466,7 @@ h2.heading {
 
 .jackpot {
   max-width: 1280px;
-  margin: 0 auto;
-  border-bottom: 1px solid rgba(50, 52, 52, 0.8); }
+  margin: 0 auto; }
   .jackpot__container {
     display: flex;
     justify-content: space-between;
@@ -480,6 +479,14 @@ h2.heading {
     justify-content: space-between;
     flex: 1 1 50%;
     padding: 0 0.4em; }
+    .jackpot__interior:nth-child(3):after {
+      content: "";
+      position: relative;
+      bottom: 0;
+      margin: 0 auto;
+      height: 1px;
+      width: 95%;
+      background: white; }
   .jackpot__caption {
     font-size: 18px;
     font-weight: 400;
