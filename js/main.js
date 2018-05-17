@@ -58,6 +58,12 @@ $(document).ready(function() {
             return false;
         });
     }
+    $('.logo').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 250);
+        return false;
+    });
 	//Burger menu && tracing scroll navigation END
 	//Settings carousel
 	scrollNav();
