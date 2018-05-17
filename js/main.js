@@ -50,6 +50,7 @@ $(document).ready(function() {
             $(this).closest('li').addClass("menu__item_active");
             $(".header").removeClass("menu-opened");
             $("body").removeClass("no-scroll");
+            $(".header__menu").removeClass("header__menu_fullscreen-height");
             var theClass = $(this).attr("class");
             $('html, body').stop().animate({
                 scrollTop: $( $(this).attr('href') ).offset().top - 0
