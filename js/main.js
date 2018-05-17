@@ -14,10 +14,12 @@ $(document).ready(function() {
 	//Burger menu && tracing scroll navigation
 	var burger = document.querySelector('.header__burger-container'),
         header = document.querySelector('.header'),
+        headerMenu = document.querySelector('.header__menu'),
         body = document.querySelector("body");
     burger.onclick = function() {
         header.classList.toggle('menu-opened'),
-        body.classList.toggle("no-scroll");
+        body.classList.toggle("no-scroll"),
+        headerMenu.classList.toggle("header__menu_fullscreen-height");
       }
     var lastId,
         menu = $(".menu"),

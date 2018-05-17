@@ -771,8 +771,10 @@ h2.heading {
       align-items: center;
       justify-content: normal;
       flex-direction: column;
-      height: 100vh;
+      height: 0;
       overflow-y: scroll; }
+      .header__menu_fullscreen-height {
+        height: 100vh; }
     .header__burger-container {
       position: absolute;
       display: inline-block;
@@ -1012,8 +1014,10 @@ h2.heading {
       align-items: center;
       justify-content: normal;
       flex-direction: column;
-      height: 100vh;
+      height: 0;
       overflow-y: scroll; }
+      .header__menu_fullscreen-height {
+        height: 100vh; }
     .header__burger-container {
       position: absolute;
       display: inline-block;
@@ -1284,8 +1288,10 @@ h2.heading {
       align-items: center;
       justify-content: normal;
       flex-direction: column;
-      height: 100vh;
+      height: 0;
       overflow-y: scroll; }
+      .header__menu_fullscreen-height {
+        height: 100vh; }
     .header__burger-container {
       position: absolute;
       display: inline-block;
@@ -1592,8 +1598,10 @@ h2.heading {
       align-items: center;
       justify-content: normal;
       flex-direction: column;
-      height: 100vh;
+      height: 0;
       overflow-y: scroll; }
+      .header__menu_fullscreen-height {
+        height: 100vh; }
     .header__burger-container {
       position: absolute;
       display: inline-block;
