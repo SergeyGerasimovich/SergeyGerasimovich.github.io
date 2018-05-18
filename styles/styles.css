@@ -141,13 +141,10 @@ img {
 main {
   overflow: hidden; }
 
-.app {
-  height: 100%; }
-  .no-scroll .app {
+#app {
+  height: 100vh; }
+  .no-scroll #app {
     overflow: hidden; }
-.app_fullscreen-height {
-  height: 100vh;
-}
 
 .heading {
   font-family: 'PTSans', sans-serif;

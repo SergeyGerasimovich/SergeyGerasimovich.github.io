@@ -15,12 +15,10 @@ $(document).ready(function() {
 	var burger = document.querySelector('.header__burger-container'),
         header = document.querySelector('.header'),
         headerMenu = document.querySelector('.header__menu'),
-        app = document.querySelector('.app'),
         body = document.querySelector("body");
     burger.onclick = function() {
         header.classList.toggle('header-opened'),
         body.classList.toggle("no-scroll"),
-        app.classList.toggle("app_fullscreen-height"),
         headerMenu.classList.toggle("header__menu_fullscreen-height");
       }
     var lastId,
@@ -53,7 +51,6 @@ $(document).ready(function() {
             $(".header").removeClass("header-opened");
             $("body").removeClass("no-scroll");
             $(".header__menu").removeClass("header__menu_fullscreen-height");
-            $(".app").removeClass("app_fullscreen-height");
             var theClass = $(this).attr("class");
             $('html, body').stop().animate({
                 scrollTop: $( $(this).attr('href') ).offset().top - 0
