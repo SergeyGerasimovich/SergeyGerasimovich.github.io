@@ -142,7 +142,7 @@ main {
   overflow: hidden; }
 
 #app {
-  height: 150vh; }
+  height: 100%; }
   .no-scroll #app {
     overflow: hidden; }
 

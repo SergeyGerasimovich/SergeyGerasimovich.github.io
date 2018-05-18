@@ -61,7 +61,7 @@ $(document).ready(function() {
     $('.logo').click(function () {
         $('body,html').animate({
             scrollTop: 0
-        }, 250);
+        }, 350);
         return false;
     });
 	//Burger menu && tracing scroll navigation END
