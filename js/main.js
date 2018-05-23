@@ -17,7 +17,7 @@ $(document).ready(function() {
         headerMenu = document.querySelector('.header__menu'),
         body = document.querySelector("body");
     burger.onclick = function() {
-        header.classList.toggle('header-opened'),
+        header.classList.toggle('menu-opened'),
         body.classList.toggle("no-scroll"),
         headerMenu.classList.toggle("header__menu_fullscreen-height");
       }
@@ -48,7 +48,7 @@ $(document).ready(function() {
         $('a').click(function(){
             $(".menu__item_active").removeClass("menu__item_active");
             $(this).closest('li').addClass("menu__item_active");
-            $(".header").removeClass("header-opened");
+            $(".header").removeClass("menu-opened");
             $("body").removeClass("no-scroll");
             $(".header__menu").removeClass("header__menu_fullscreen-height");
             var theClass = $(this).attr("class");
